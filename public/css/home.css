@@ -1,0 +1,207 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    background-color: rgb(198, 241, 241);
+}
+
+nav {
+    z-index: 10;
+    position: sticky;
+    float: right;
+    text-align: right;
+    top: 0;
+}
+
+.navbar {
+    margin-top: 30px;
+    margin-right: 40px;
+}
+
+nav>ul>li {
+    list-style: none;
+    display: inline;
+    padding: 20px;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    font-size: 20px;
+    padding-inline: 8px;
+}
+
+nav>ul>li>.nav-signup {
+    color: white;
+    background-color: black;
+    padding-block: 7px;
+    border-radius: 100px;
+}
+
+#home {
+    height: 100vh;
+}
+
+.home-box {
+    position: absolute;
+    margin: 10%;
+    height: 55%;
+    width: 35%;
+    background-color: white;
+    border-radius: 42px;
+}
+
+.home-right {
+    position: absolute;
+    margin-top: 17%;
+    margin-left: 50%;
+}
+
+.home-right>p {
+    margin-top: 10px;
+    font-size: 24px;
+    width: 60%;
+}
+
+h1 {
+    font-family: "monument_extendedultraboldZ";
+    font-size: 40px;
+}
+
+h1>span {
+    padding-inline: 10px;
+    margin-inline: -10px;
+}
+
+.orange-button {
+    margin-top: 25px;
+}
+
+.orange-button>span {
+    font-family: "monument_extendedregular";
+    padding: 8px;
+    border-radius: 100px;
+    color: white;
+    background-image: linear-gradient(#F7A72E, #F7732B, #F44007);
+}
+
+.title span {
+    color: white;
+    background-color: black;
+}
+
+video {
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
+#about {
+    height: 100vh;
+}
+
+#about>div>h2 {
+    font-family: "monument_extendedultraboldZ";
+    font-size: 30px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+#about>div>p {
+    font-size: 24px;
+}
+
+.about-text {
+    padding: 18%;
+    padding-top: 25%;
+}
+
+.about-box {
+    position: absolute;
+    background-color: white;
+    margin-left: 29%;
+    margin-top: -17%;
+    width: 35vw;
+    height: 40vh;
+    border-radius: 42px;
+}
+
+#champion {
+    height: 150vh;
+}
+
+#champion>h1 {
+    text-align: center;
+}
+
+#champion>div>h4 {
+    width: 100%;
+    text-align: center;
+}
+
+#champion>div>h4>span {
+    font-family: "monument_extendedregular";
+    font-size: 20px;
+    font-weight: 100;
+    background-color: black;
+    border-radius: 7px;
+    color: white;
+    padding: 7px;
+    width: 15%;
+}
+
+#champion>div>p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.juara3 {
+    width: 20%;
+    margin-top: 30%;
+    margin-left: 10%;
+}
+
+.juara2 {
+    width: 20%;
+    margin-top: -15%;
+    margin-left: 70%;
+}
+
+.juara1 {
+    width: 20%;
+    margin-top: 10%;
+    margin-left: 40%;
+}
+
+#mentor {
+    height: 100vh;
+}
+
+#mentor>h1 {
+    text-align: center;
+}
+
+#mentor>ul {
+    text-align: center;
+    padding: 20px;
+}
+
+#mentor>ul>li {
+    display: inline;
+    font-size: 24px;
+    padding: 25px;
+}
+
+#timeline {
+    height: 100vh;
+}
+
+#faq {
+    height: 100vh;
+}
+
+#mentor {
+    height: 100vh;
+}
