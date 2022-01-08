@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\Password;
 
 class RegisterController extends Controller
 {
@@ -50,9 +51,12 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'group_name' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'string', 'min:8', 'confirmed', 'regex:/[a-z]/', 'regex:/[A-Z]/', 'regex:/[0-9]/', 'regex:/[@$!%*#?&]/'],
-            'password_confirm' => ['required', 'same:password'],
+            'group_name' => ['required', 'string', 'max:255', 'unique:users'],
+            'password' => ['required','confirmed',
+            Password::min(8)
+            ->mixedCase()
+            ->numbers()
+            ->symbols()],
             'leader_name' => ['required', 'string', 'max:255'],
             'leader_email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'leader_wa_number' => ['required', 'numeric', 'min:9', 'max:20', 'unique:users'],
@@ -60,6 +64,7 @@ class RegisterController extends Controller
             'leader_github' => ['required', 'string', 'max:255'],
             'leader_birth_place' => ['required', 'string', 'max:255'],
             'leader_birth_date' => ['required', 'date'],
+            'leader_CV' => ['required', 'max:10000', 'mimes:pdf,jpg,jpeg,png'],
         ]);
     }
 

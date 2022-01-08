@@ -21,7 +21,7 @@ class User extends Authenticatable
         'group_name',
         // 'email',
         'password',
-        'password_confirm',
+        'status',
         'leader_email',
         'leader_wa_number',
         'leader_line_id',
