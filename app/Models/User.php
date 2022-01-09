@@ -28,6 +28,8 @@ class User extends Authenticatable
         'leader_github',
         'leader_birth_place',
         'leader_birth_date',
+        'leader_CV',
+        'leader_card',
     ];
 
     public function member(){

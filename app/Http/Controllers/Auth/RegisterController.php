@@ -66,6 +66,7 @@ class RegisterController extends Controller
             'leader_birth_place' => ['required', 'string', 'max:255'],
             'leader_birth_date' => ['required', 'date'],
             'leader_CV' => ['required', 'max:10000', 'mimes:pdf,jpg,jpeg,png'],
+            'leader_card' => ['required', 'max:10000', 'mimes:pdf,jpg,jpeg,png'],
         ]);
     }
 
