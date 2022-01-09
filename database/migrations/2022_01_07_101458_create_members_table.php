@@ -22,7 +22,8 @@ class CreateMembersTable extends Migration
             $table->string('github');
             $table->string('birth_place');
             $table->date('birth_date');
-            // $table->file('cv');
+            $table->string('cv');
+            $table->string('card');
             $table->string('group_name');
             $table->foreign('group_name')->references('group_name')->on('users');
             $table->timestamps();
