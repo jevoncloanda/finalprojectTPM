@@ -16,7 +16,6 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('group_name')->unique();
-            // $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('status');
@@ -27,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('leader_github');
             $table->string('leader_birth_place');
             $table->date('leader_birth_date');
-            $table->file('leader_CV');
+            // $table->file('leader_cv');
             $table->rememberToken();
             $table->timestamps();
         });

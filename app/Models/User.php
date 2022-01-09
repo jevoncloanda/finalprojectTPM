@@ -19,9 +19,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'group_name',
-        // 'email',
         'password',
         'status',
+        'leader_name',
         'leader_email',
         'leader_wa_number',
         'leader_line_id',
@@ -29,6 +29,10 @@ class User extends Authenticatable
         'leader_birth_place',
         'leader_birth_date',
     ];
+
+    public function member(){
+        return $this->hasMany(Member::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.

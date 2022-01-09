@@ -57,6 +57,7 @@ class RegisterController extends Controller
             ->mixedCase()
             ->numbers()
             ->symbols()],
+            'status' => ['required', 'string'],
             'leader_name' => ['required', 'string', 'max:255'],
             'leader_email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'leader_wa_number' => ['required', 'numeric', 'min:9', 'max:20', 'unique:users'],

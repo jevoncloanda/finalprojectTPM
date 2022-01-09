@@ -25,8 +25,8 @@ class MemberRequest extends FormRequest
     public function rules()
     {
         return [
-            'group_name' => ['required','min:1','max:255','unique:groups'],
-            'email' => ['required','email','unique:groups'],
+            'group_name' => ['required','min:1','max:255'],
+            'email' => ['required','email'],
             'password' => ['required','confirmed',
             Password::min(8)
             ->mixedCase()
