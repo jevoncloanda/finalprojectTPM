@@ -99,7 +99,7 @@ class RegisterController extends Controller
     }
 
 
-    //SEARCH DAN VIEW DATA
+    //VIEW TEAM DATA (ADMIN)
 
     public function getLeaderData(Request $request){
 
@@ -107,6 +107,16 @@ class RegisterController extends Controller
             $users = User::where('group_name','like','%'.request('search').'%')->get();
         } else{
             $users = User::all();
+        }
+
+        //$sortnya itu kek ASC atau DESC
+        if ($request->input('sort')){
+            $users = User::orderBy('name',request('sort'))->get();
+        }
+
+        //Filter
+        if ($request->input('filter')){
+            $users = User::where('verification_status','like','%'.request('filter').'%')->get();
         }
 
         //cara lain pake $appliers = DB::table('appliers')->get();
@@ -149,4 +159,5 @@ class RegisterController extends Controller
         User::destroy($id);
         return redirect(route('bebas'));
     }
+
 }
