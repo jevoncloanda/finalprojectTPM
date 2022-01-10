@@ -40,11 +40,10 @@
         <div class="home-box">
 
         </div>
-
         <div class="home-right">
             <h1 class="title"><span>HACKATHON?</span></h1>
             <p>Lörem ipsum intraliga misk. Sor homokompetens läling.</p>
-            <div class="orange-button"><span>Let's Talk!</span></div>
+            <div class="orange-button"><a href="#"><span>Let's Talk!</span></a></div>
         </div>
     </section>
 
@@ -55,7 +54,7 @@
             <h2>HACKATHON</h2>
             <p>Lörem ipsum tåvis mamirade i prens i prejälogi. Diang ed kroning när fadunar. Lasse Berghagen-vin trinera dejins i roråbel, föbelt. Lall faning. Kin dopongar för att nyskade, i karade ogt. Tiligen kak digifysisk. Göling ass demoform. Dertad söngen yfengar tretedat. Treföss reprepurade. Semision anöktig ipysm pons. Anteskap platren. Reklejma donde pyd sperad, ett megalande. Fast hyposende, huruvida sor.</p>
             <div class="orange-button">
-                <span>Download Guidebook</span>
+                <a href="#"><span>Download Guidebook</span></a>
             </div>
         </div>
     </section>
@@ -67,13 +66,11 @@
             <h4><span>Juara 3</span></h4>
             <p>Lörem ipsum tåvis mamirade i prens i prejälogi. Diang ed kroning</p>
         </div>
-
         <div class="juara1">
             <div class="box-juara1"></div>
             <h4><span>Juara 1</span></h4>
             <p>Lörem ipsum tåvis mamirade i prens i prejälogi. Diang ed kroning</p>
         </div>
-
         <div class="juara2">
             <div class="box-juara2"></div>
             <h4><span>Juara 2</span></h4>
@@ -88,22 +85,38 @@
             <li>Technology</li>
             <li>Business</li>
         </ul>
+        <div class="mentor-design">
+            <div class="design1">
+                <span class="design-name">Mr. Steven</span>
+                <p>Lörem ipsum tåvis mamirade i prens i prejälogi. Diang ed kroning</p>
+            </div>
+            <div class="design2">
+                <span class="design-name">Mr. Steven</span>
+                <p>Lörem ipsum tåvis mamirade i prens i prejälogi. Diang ed kroning</p>
+            </div>
+            <div class="design3">
+                <span class="design-name">Mr. Steven</span>
+                <p>Lörem ipsum tåvis mamirade i prens i prejälogi. Diang ed kroning</p>
+            </div>
+        </div>
     </section>
 
-    <section id="timeline">
-
-    </section>
-
-    <section id="faq">
-
-    </section>
-
-    <section id="mentor">
-
-    </section>
-
-    <section id="signup">
-
+    <section id="jury">
+        <h1>OUR JURY </h1>
+        <div class="jury-box">
+            <div class="jury1">
+                <span class="jury-name">Mr. Steven</span>
+                <p>Lörem ipsum tåvis mamirade i prens i prejälogi. Diang ed kroning</p>
+            </div>
+            <div class="jury2">
+                <span class="jury-name">Mr. Steven</span>
+                <p>Lörem ipsum tåvis mamirade i prens i prejälogi. Diang ed kroning</p>
+            </div>
+            <div class="jury3">
+                <span class="jury-name">Mr. Steven</span>
+                <p>Lörem ipsum tåvis mamirade i prens i prejälogi. Diang ed kroning</p>
+            </div>
+        </div>
     </section>
 
 </body>
