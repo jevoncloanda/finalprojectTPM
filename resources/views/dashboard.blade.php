@@ -57,7 +57,7 @@
             </div>
         </header>
 
-        <section id="profile">
+        <!-- <section id="profile">
             <h1>Profile</h1>
             <form action="submit" class="profile-data">
                 <div class="name">
@@ -97,7 +97,7 @@
                     <input type="text" placeholder="Please type ...">
                 </div>
             </form>
-        </section>
+        </section> -->
 
         <!-- <section id="pay-upload">
             <h1>Upload Payment Receipt</h1>
@@ -120,25 +120,33 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed.</p>
         </section> -->
 
-        <!-- <section id="timeline">
+        <section id="timeline">
             <h1>Timeline</h1>
-            <div class="open">
-                <h3>Open Registration</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed. Viverra aliquet consequat consequat congue. Volutpat ac, enim, montes, nullam eget feugiat cras quis sed. Convallis non mattis sociis aliquet viverra arcu. Quam mauris justo condimentum elit faucibus pulvinar adipiscing nulla lectus. Pharetra pellentesque enim elementum vehicula rhoncus, risus elementum. Et et vestibulum faucibus cursus sed est mattis ullamcorper odio. Et, hendrerit nunc neque, feugiat neque elit id vel.</p>
+            <div class="timeline-right">
             </div>
-            <div class="close">
-                <h3>Close Registration</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed. Viverra aliquet consequat consequat congue. Volutpat ac, enim, montes, nullam eget feugiat cras quis sed. Convallis non mattis sociis aliquet viverra arcu. Quam mauris justo condimentum elit faucibus pulvinar adipiscing nulla lectus. Pharetra pellentesque enim elementum vehicula rhoncus, risus elementum. Et et vestibulum faucibus cursus sed est mattis ullamcorper odio. Et, hendrerit nunc neque, feugiat neque elit id vel.</p>
+            <div class="timeline-left">
+                <div class="open">
+                    <div class="circle"></div>
+                    <h3>Open Registration</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed. Viverra aliquet consequat consequat congue. Volutpat ac, enim, montes, nullam eget feugiat cras quis sed. Convallis non mattis sociis aliquet viverra arcu. Quam mauris justo condimentum elit faucibus pulvinar adipiscing nulla lectus. Pharetra pellentesque enim elementum vehicula rhoncus, risus elementum. Et et vestibulum faucibus cursus sed est mattis ullamcorper odio. Et, hendrerit nunc neque, feugiat neque elit id vel.</p>
+                </div>
+                <div class="close">
+                    <div class="circle"></div>
+                    <h3>Close Registration</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed. Viverra aliquet consequat consequat congue. Volutpat ac, enim, montes, nullam eget feugiat cras quis sed. Convallis non mattis sociis aliquet viverra arcu. Quam mauris justo condimentum elit faucibus pulvinar adipiscing nulla lectus. Pharetra pellentesque enim elementum vehicula rhoncus, risus elementum. Et et vestibulum faucibus cursus sed est mattis ullamcorper odio. Et, hendrerit nunc neque, feugiat neque elit id vel.</p>
+                </div>
+                <div class="technical">
+                    <div class="circle"></div>
+                    <h3>Technical Meeting</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed. Viverra aliquet consequat consequat congue. Volutpat ac, enim, montes, nullam eget feugiat cras quis sed. Convallis non mattis sociis aliquet viverra arcu. Quam mauris justo condimentum elit faucibus pulvinar adipiscing nulla lectus. Pharetra pellentesque enim elementum vehicula rhoncus, risus elementum. Et et vestibulum faucibus cursus sed est mattis ullamcorper odio. Et, hendrerit nunc neque, feugiat neque elit id vel.</p>
+                </div>
+                <div class="competition">
+                    <div class="circle"></div>
+                    <h3>Competition Day</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed. Viverra aliquet consequat consequat congue. Volutpat ac, enim, montes, nullam eget feugiat cras quis sed. Convallis non mattis sociis aliquet viverra arcu. Quam mauris justo condimentum elit faucibus pulvinar adipiscing nulla lectus. Pharetra pellentesque enim elementum vehicula rhoncus, risus elementum. Et et vestibulum faucibus cursus sed est mattis ullamcorper odio. Et, hendrerit nunc neque, feugiat neque elit id vel.</p>
+                </div>
             </div>
-            <div class="technical">
-                <h3>Technical Meeting</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed. Viverra aliquet consequat consequat congue. Volutpat ac, enim, montes, nullam eget feugiat cras quis sed. Convallis non mattis sociis aliquet viverra arcu. Quam mauris justo condimentum elit faucibus pulvinar adipiscing nulla lectus. Pharetra pellentesque enim elementum vehicula rhoncus, risus elementum. Et et vestibulum faucibus cursus sed est mattis ullamcorper odio. Et, hendrerit nunc neque, feugiat neque elit id vel.</p>
-            </div>
-            <div class="competition">
-                <h3>Competition Day</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed. Viverra aliquet consequat consequat congue. Volutpat ac, enim, montes, nullam eget feugiat cras quis sed. Convallis non mattis sociis aliquet viverra arcu. Quam mauris justo condimentum elit faucibus pulvinar adipiscing nulla lectus. Pharetra pellentesque enim elementum vehicula rhoncus, risus elementum. Et et vestibulum faucibus cursus sed est mattis ullamcorper odio. Et, hendrerit nunc neque, feugiat neque elit id vel.</p>
-            </div>
-        </section> -->
+        </section>
 
         <div class="contact-person">
             <h3>For more information please kindly contact :</h3>
