@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('leader_github');
             $table->string('leader_birth_place');
             $table->date('leader_birth_date');
-            $table->string('leader_cv');
+            $table->string('leader_CV');
             $table->string('leader_card');
             $table->rememberToken();
             $table->timestamps();
