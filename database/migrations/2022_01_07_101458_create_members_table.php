@@ -25,7 +25,9 @@ class CreateMembersTable extends Migration
             $table->string('cv');
             $table->string('card');
             $table->string('group_name');
-            $table->foreign('group_name')->references('group_name')->on('users');
+            $table->foreign('group_name')->references('group_name')->on('users')
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }
