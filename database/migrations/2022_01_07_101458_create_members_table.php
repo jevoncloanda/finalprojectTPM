@@ -24,8 +24,8 @@ class CreateMembersTable extends Migration
             $table->date('birth_date');
             $table->string('cv');
             $table->string('card');
-            $table->string('group_name');
-            $table->foreign('group_name')->references('group_name')->on('users')
+            $table->unsignedBigInteger('group_id');
+            $table->foreign('group_id')->references('id')->on('users')
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->timestamps();
