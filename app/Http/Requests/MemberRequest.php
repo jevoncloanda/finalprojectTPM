@@ -25,14 +25,15 @@ class MemberRequest extends FormRequest
     public function rules()
     {
         return [
-            'group_name' => ['required','min:1','max:255'],
-            'email' => ['required','email'],
-            'password' => ['required','confirmed',
-            Password::min(8)
-            ->mixedCase()
-            ->numbers()
-            ->symbols()],
-            'status' => ['required'],
+            'name' => ['required', 'string','min:1','max:255'],
+            'email' => ['required','string','email', 'unique:members'],
+            'wa_number' => ['required','numeric', 'min:9', 'max:20', 'unique:members'],
+            'line_id' => ['required', 'string', 'max:255', 'unique:members'],
+            'github' => ['required','string','max:255'],
+            'birth_place' => ['required', 'string', 'max:255'],
+            'birth_date' => ['required','date'],
+            'cv' => ['required','max:10000','mimes:pdf,jpg,jpeg,png'],
+            'card' => ['required','max:10000','mimes:pdf,jpg,jpeg,png'],
         ];
     }
 }
