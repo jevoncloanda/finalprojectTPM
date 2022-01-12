@@ -1,0 +1,100 @@
+.sign-in-section .iconify {
+    color: black;
+}
+
+.sign-in-section .line {
+    width: 430px;
+    height: 1px;
+    background: #c4c4c4;
+}
+
+.sign-in-section .container-items {
+    background: #e5e5e5;
+    width: 700px;
+    height: 470px;
+    border-radius: 20px;
+    margin-top: -20px;
+}
+
+.sign-in-section .display-table-cell {
+    width: 400px;
+}
+
+.sign-in-section h1 {
+    text-transform: capitalize;
+}
+
+.display-table-cell.icon-placeholder {
+    width: 0px !important;
+    min-width: 0 !important;
+}
+
+.icon-placeholder .iconify {
+    float: right;
+    padding-right: 10px;
+    margin-bottom: -3px;
+}
+
+.display-table-cell input {
+    background: transparent !important;
+    border: none;
+    width: 100%;
+    height: 15px;
+    margin-bottom: 6px;
+    outline: 0;
+}
+
+.sign-in-section .btn {
+    background: #c4c4c4;
+    color: black;
+}
+
+.foo-container h1 {
+    margin-top: -20px;
+    margin-bottom: 70px;
+}
+
+.foo-container h4 {
+    margin-top: 35px;
+}
+
+.foo-container .btn {
+    margin-top: 80px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+}
+
+.foo-container .btn:hover {
+    cursor: pointer;
+}
+
+.foo-bar-container {
+    text-align: center;
+    align-items: center;
+}
+
+.foo-bar-container a:hover {
+    cursor: pointer;
+}
+
+.foo-bar-container p {
+    font-weight: bold;
+    color: #c4c4c4;
+}
+
+.foo-bar-container span:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    margin-top: 15px;
+    margin-left: -43px;
+    transition: all 0.3s ease;
+    background: #c4c4c4;
+}
+
+.foo-bar-container span:hover:after {
+    width: 60px;
+}

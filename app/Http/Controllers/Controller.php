@@ -20,4 +20,9 @@ class Controller extends BaseController
     {
         return view('dashboard');
     }
+
+    public function getRegistrationPage()
+    {
+        return view('registration');
+    }
 }

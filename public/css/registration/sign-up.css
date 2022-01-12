@@ -1,0 +1,119 @@
+.sign-up-section select {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: gray;
+    margin-bottom: 4px;
+}
+
+.sign-up-section .triangle {
+    margin-left: -10px;
+    margin-right: 5px;
+    transform: rotate(180deg);
+}
+
+.sign-up-section h1 {
+    margin-top: 20px !important;
+    text-transform: capitalize;
+}
+
+.sign-up-section .btn {
+    margin-top: 30px !important;
+}
+
+.sign-up-section .circle-container {
+    margin-top: -60px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-section .circle {
+    background: rgb(194, 194, 194);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.sign-up-section .circle:nth-child(2) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.sign-up-section .circle:nth-child(3) {
+    margin-right: 10px;
+}
+
+.sign-up-section .circle.active {
+    background: gray;
+}
+
+.sign-up-section .foo-bar-container span:after {
+    margin-left: -35px !important;
+}
+
+.page-3 h4 {
+    margin-top: 15px !important;
+}
+
+.sign-up-section .page-2 .text-center {
+    margin-top: -5px;
+    margin-bottom: -15px;
+}
+
+.gender {
+    display: flex;
+    height: 30px;
+}
+
+.gender h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-top: -10px !important;
+}
+
+.gender .iconify {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.gender.display-table-row {
+    display: flex !important;
+}
+
+.male-option.gender {
+    margin-right: 45px;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    margin-left: 9px;
+    margin-top: 2.5px;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    background-color: #c4c4c4;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked~.checkmark {
+    background-color: gray;
+}
+
+.file label {
+    cursor: pointer;
+}

@@ -18,6 +18,8 @@ Route::get('/', [Controller::class, 'getHomePage'])->name('getHomePage');
 
 Route::get('/dashboard', [Controller::class, 'getDashboardPage'])->name('getDashboardPage');
 
+Route::get('/registration', [Controller::class, 'getRegistrationPage'])->name('getRegistrationPage');
+
 Auth::routes();
 
 Route::get('/success', [App\Http\Controllers\HomeController::class, 'index'])->name('success');

@@ -1,0 +1,59 @@
+.navbar.registration-page {
+    height: 90px;
+}
+
+.registration-page .container {
+    padding-right: 90px;
+    padding-left: 90px;
+    vertical-align: middle;
+}
+
+.registration-page .container-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.registration-page .btn {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.registration-page p {
+    font-size: 13px;
+}
+
+.registration-page a {
+    color: black;
+}
+
+.registration-page a:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: black;
+}
+
+.registration-page a:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    background: black;
+    transition: all 0.4s ease;
+    margin-top: 2px;
+}
+
+.registration-page a:hover:after {
+    width: 80px;
+}
+
+.registration-page .btn:hover {
+    cursor: pointer;
+    font-weight: bold;
+}

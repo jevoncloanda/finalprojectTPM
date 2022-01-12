@@ -32,7 +32,7 @@
             <li><a href="#timeline">Timeline</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#mentor">Mentor &  Jury</a></li>
-            <li><a class="nav-signup" href="#signup">Sign Up</a></li>
+            <li><a class="nav-signup" href="{{route('getRegistrationPage')}}">Sign Up</a></li>
         </ul>
     </nav>
 
