@@ -35,7 +35,7 @@
     <!-- Sign In Section -->
     <div class="sign-in-section section hidden">
         <div class="container">
-            <form class="container-items center">
+            <form action="" method="POST" class="container-items center">
 
                 <div class="foo-container">
 
@@ -86,8 +86,8 @@
     <!-- Sign Up Section -->
     <div class="sign-in-section sign-up-section section">
         <div class="container">
-            <form class="container-items center">
-
+            <form action="{{route('register')}}" method="POST" class="container-items center" enctype="multipart/form-data">
+                @csrf
                 <div class="foo-container">
 
                     <h1 class="sign-in">Sign Up</h1>
@@ -108,7 +108,7 @@
                                     <span class="iconify" data-icon="akar-icons:person"></span>
                                 </div>
                                 <div class="display-table-cell">
-                                    <input type='text' placeholder="Please type your team name here..">
+                                    <input type="text" name="group_name" id="group_name" placeholder="Please type your team name here..">
                                 </div>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
                                     <span class="iconify" data-icon="akar-icons:key"></span>
                                 </div>
                                 <div class="display-table-cell">
-                                    <input type='text' placeholder="Please type your team password here..">
+                                    <input type="password" name="password" id="password" placeholder="Please type your team password here..">
                                 </div>
                             </div>
                         </div>
@@ -136,10 +136,10 @@
                                     <span class="iconify triangle" data-icon="fluent:triangle-12-regular"></span>
                                 </div>
                                 <div class="display-table-cell">
-                                    <select>
+                                    <select name="status" id="status">
                                         <option>Please select your registration type</option>
-                                        <option value='binusian'>Binusian</option>
-                                        <option value='non-binusian'>Non Binusian</option>
+                                        <option value='Binusian'>Binusian</option>
+                                        <option value='Non-binusian'>Non Binusian</option>
                                     </select>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@
                                     <span class="iconify" data-icon="akar-icons:person"></span>
                                 </div>
                                 <div class="display-table-cell">
-                                    <input type='text' placeholder="Please type your full name here..">
+                                    <input type="text" name="leader_name" id="leader_name" placeholder="Please type your full name here..">
                                 </div>
                             </div>
                         </div>
@@ -180,7 +180,7 @@
                                     <span class="iconify" data-icon="akar-icons:location"></span>
                                 </div>
                                 <div class="display-table-cell">
-                                    <input type='text' placeholder="Please type your place of birth here..">
+                                    <input type="text" name="leader_birth_place" id="leader_birth_place" placeholder="Please type your place of birth here..">
                                 </div>
                             </div>
                         </div>
@@ -194,7 +194,7 @@
                                     <span class="iconify triangle" data-icon="fluent:triangle-12-regular"></span>
                                 </div>
                                 <div class="display-table-cell">
-                                    <input type='date'>
+                                    <input type="date" name="leader_birth_date" id="leader_birth_date">
                                 </div>
                             </div>
                         </div>
@@ -204,8 +204,8 @@
                         <div class="center">
                             <div class="foo-bar-container">
                                 <div class="button-container">
-                                    <button class='btn sign-in-btn back'>Back</button>
-                                    <button class='btn sign-in-btn next'>Next</button>
+                                    <button class="btn sign-in-btn back">Back</button>
+                                    <button class="btn sign-in-btn next">Next</button>
                                 </div>
                                 <p>Already have an account ?
                                     <span><a>Login</a></span>
@@ -224,7 +224,7 @@
                                     <span class="iconify" data-icon="carbon:email"></span>
                                 </div>
                                 <div class="display-table-cell">
-                                    <input type='text' placeholder="Please type your email here..">
+                                    <input type="email" name="leader_email" id="leader_email" placeholder="Please type your email here..">
                                 </div>
                             </div>
                         </div>
@@ -238,7 +238,7 @@
                                     <span class="iconify" data-icon="akar-icons:whatsapp-fill"></span>
                                 </div>
                                 <div class="display-table-cell">
-                                    <input type='text' placeholder="Please type your Whatsapp number here..">
+                                    <input type="text" name="leader_wa_number" id="leader_wa_number" placeholder="Please type your Whatsapp number here..">
                                 </div>
                             </div>
                         </div>
@@ -252,7 +252,7 @@
                                     <span class="iconify" data-icon="bi:line"></span>
                                 </div>
                                 <div class="display-table-cell">
-                                    <input type='text' placeholder="Please type your LINE ID here..">
+                                    <input type="text" name="leader_line_id" id="leader_line_id" placeholder="Please type your LINE ID here..">
                                 </div>
                             </div>
                         </div>
@@ -266,7 +266,7 @@
                                     <span class="iconify" data-icon="akar-icons:github-fill"></span>
                                 </div>
                                 <div class="display-table-cell">
-                                    <input type='text' placeholder="Please type your Github/Gitlab ID here..">
+                                    <input type="text" name="leader_github" id="leader_github" placeholder="Please type your Github/Gitlab ID here..">
                                 </div>
                             </div>
                         </div>
@@ -298,12 +298,12 @@
                             <div class="display-table-row gender">
                                 <div class="male-option gender">
                                     <label>Male
-                                        <input type='radio' value='male' name='gender'><span class="checkmark"></span>
+                                        <input type="radio" value="male" name="gender"><span class="checkmark"></span>
                                     </label>
                                 </div>
                                 <div class="female-option gender">
                                     <label>Female
-                                        <input type='radio' value='female' name='gender'><span class="checkmark"></span>
+                                        <input type="radio" value='female' name='gender'><span class="checkmark"></span>
                                     </label>
                                 </div>
                             </div>
@@ -317,7 +317,7 @@
                                     <span class="iconify" data-icon="carbon:email"></span>
                                 </div>
                                 <div class="display-table-cell file">
-                                    <input type='file' id='cv' hidden>
+                                    <input type="file" id="cv" name="leader_CV" hidden>
                                     <label for="cv" id='label-cv'>Please upload your CV card here...</label>
                                 </div>
                             </div>
@@ -332,7 +332,7 @@
                                     <span class="iconify" data-icon="carbon:email"></span>
                                 </div>
                                 <div class="display-table-cell file">
-                                    <input type='file' id='identity' hidden>
+                                    <input type="file" id='identity' name="leader_card" hidden>
                                     <label for="identity" id='label-identity'>Please upload your identity card here...</label>
                                 </div>
                             </div>
@@ -342,7 +342,7 @@
 
                         <div class="center">
                             <div class="foo-bar-container">
-                                <button class='btn sign-in-btn' type='submit'>Submit</button>
+                                <button class="btn sign-in-btn" type="submit">Submit</button>
                             </div>
                         </div>
 

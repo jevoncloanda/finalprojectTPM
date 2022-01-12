@@ -22,17 +22,18 @@ class User extends Authenticatable
         'password',
         'status',
         'leader_name',
+        'leader_birth_place',
+        'leader_birth_date',
         'leader_email',
         'leader_wa_number',
         'leader_line_id',
         'leader_github',
-        'leader_birth_place',
-        'leader_birth_date',
         'leader_CV',
         'leader_card',
     ];
 
-    public function member(){
+    public function member()
+    {
         return $this->hasMany(Member::class);
     }
 

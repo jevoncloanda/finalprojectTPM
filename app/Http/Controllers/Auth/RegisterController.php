@@ -53,19 +53,21 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'group_name' => ['required', 'string', 'max:255', 'unique:users'],
-            'password' => ['required','confirmed',
-            Password::min(8)
-            ->mixedCase()
-            ->numbers()
-            ->symbols()],
+            'password' => [
+                'required',
+                Password::min(8)
+                    ->mixedCase()
+                    ->numbers()
+                    ->symbols()
+            ],
             'status' => ['required', 'string'],
             'leader_name' => ['required', 'string', 'max:255'],
-            'leader_email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'leader_wa_number' => ['required', 'numeric', 'min:9', 'max:20', 'unique:users'],
-            'leader_line_id' => ['required', 'string', 'max:255', 'unique:users'],
-            'leader_github' => ['required', 'string', 'max:255'],
             'leader_birth_place' => ['required', 'string', 'max:255'],
             'leader_birth_date' => ['required', 'date'],
+            'leader_email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'leader_wa_number' => ['required', 'string', 'min:9', 'max:20', 'unique:users'],
+            'leader_line_id' => ['required', 'string', 'max:255', 'unique:users'],
+            'leader_github' => ['required', 'string', 'max:255'],
             'leader_CV' => ['required', 'max:10000', 'mimes:pdf,jpg,jpeg,png'],
             'leader_card' => ['required', 'max:10000', 'mimes:pdf,jpg,jpeg,png'],
         ]);
@@ -87,12 +89,12 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
             'status' => $data['status'],
             'leader_name' => $data['leader_name'],
-            'leader_email' => $data['leade_email'],
+            'leader_birth_place' => $data['leader_birth_place'],
+            'leader_birth_date' => $data['leader_birth_date'],
+            'leader_email' => $data['leader_email'],
             'leader_wa_number' => $data['leader_wa_number'],
             'leader_line_id' => $data['leader_line_id'],
             'leader_github' => $data['leader_github'],
-            'leader_birth_place' => $data['leader_birth_place'],
-            'leader_birth_date' => $data['leader_birth_date'],
             'leader_CV' => $data['leader_CV'],
             'leader_card' => $data['leader_card'],
         ]);
@@ -101,41 +103,44 @@ class RegisterController extends Controller
 
     //VIEW TEAM DATA (ADMIN)
 
-    public function getLeaderData(Request $request){
+    public function getLeaderData(Request $request)
+    {
 
-        if($request->input('search')){
-            $users = User::where('group_name','like','%'.request('search').'%')->get();
-        } else{
+        if ($request->input('search')) {
+            $users = User::where('group_name', 'like', '%' . request('search') . '%')->get();
+        } else {
             $users = User::all();
         }
 
         //$sortnya itu kek ASC atau DESC
-        if ($request->input('sort')){
-            $users = User::orderBy('name',request('sort'))->get();
+        if ($request->input('sort')) {
+            $users = User::orderBy('name', request('sort'))->get();
         }
 
         //Filter
-        if ($request->input('filter')){
-            $users = User::where('verification_status','like','%'.request('filter').'%')->get();
+        if ($request->input('filter')) {
+            $users = User::where('verification_status', 'like', '%' . request('filter') . '%')->get();
         }
 
         //cara lain pake $appliers = DB::table('appliers')->get();
-        return view('view',['users'=>$users]);
+        return view('view', ['users' => $users]);
     }
 
 
     //UPDATE
 
-    public function getLeaderDataById($id){
+    public function getLeaderDataById($id)
+    {
         $user = User::find($id);
-        return view('update',['user' => $user]);
+        return view('update', ['user' => $user]);
     }
 
-    public function updateLeaderData(array $data, $id){
+    public function updateLeaderData(array $data, $id)
+    {
         $user = User::find($id);
 
         $user->update([
-            'group_name'=> $data['group_name'],
+            'group_name' => $data['group_name'],
             'password' => Hash::make($data['password']),
             'status' => $data['status'],
             'leader_name' => $data['leader_name'],
@@ -155,9 +160,9 @@ class RegisterController extends Controller
 
     //DELETE TEAM
 
-    public function deleteTeam($id){
+    public function deleteTeam($id)
+    {
         User::destroy($id);
         return redirect(route('bebas'));
     }
-
 }

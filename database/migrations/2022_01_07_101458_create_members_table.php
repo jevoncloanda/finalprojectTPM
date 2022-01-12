@@ -22,12 +22,12 @@ class CreateMembersTable extends Migration
             $table->string('github');
             $table->string('birth_place');
             $table->date('birth_date');
-            $table->string('cv');
+            $table->string('CV');
             $table->string('card');
             $table->unsignedBigInteger('group_id');
             $table->foreign('group_id')->references('id')->on('users')
-            ->onUpdate('cascade')
-            ->onDelete('cascade');
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
             $table->timestamps();
         });
     }

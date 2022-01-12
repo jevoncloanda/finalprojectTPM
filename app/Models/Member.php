@@ -17,12 +17,13 @@ class Member extends Model
         'github',
         'birth_place',
         'birth_date',
-        'cv',
+        'CV',
         'card',
         'group_name',
     ];
 
-    public function user(){
+    public function user()
+    {
         return $this->hasOne(User::class);
     }
 }

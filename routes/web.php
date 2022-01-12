@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Route::get('/registration', [Controller::class, 'getRegistrationPage'])->name('g
 Auth::routes();
 
 Route::get('/success', [App\Http\Controllers\HomeController::class, 'index'])->name('success');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
