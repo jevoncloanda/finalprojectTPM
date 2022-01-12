@@ -35,7 +35,7 @@
     <!-- Sign In Section -->
     <div class="sign-in-section section hidden">
         <div class="container">
-            <form action="" method="POST" class="container-items center">
+            <form action="{{route('login')}}" method="POST" class="container-items center">
 
                 <div class="foo-container">
 
@@ -48,7 +48,7 @@
                                 <span class="iconify" data-icon="akar-icons:person"></span>
                             </div>
                             <div class="display-table-cell">
-                                <input type='text' placeholder="Please type your team name here..">
+                                <input name="group_name" type='text' placeholder="Please type your team name here..">
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                                 <span class="iconify" data-icon="akar-icons:key"></span>
                             </div>
                             <div class="display-table-cell">
-                                <input type='text' placeholder="Please type your team password here..">
+                                <input name="password" type='text' placeholder="Please type your team password here..">
                             </div>
                         </div>
                     </div>
