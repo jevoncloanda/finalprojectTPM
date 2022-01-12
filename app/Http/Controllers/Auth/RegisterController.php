@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\Password;
 
@@ -82,8 +83,16 @@ class RegisterController extends Controller
 
     //CREATE DATA
 
-    protected function create(array $data)
+    protected function create(Request $request, array $data)
     {
+        $file = $request->leader_CV;
+        $filename = time().'.'.$file->getClientOriginalExtension();
+        $request->leader_CV->move('storageCV',$filename);
+
+        $file2 = $request->leader_card;
+        $filename2 = time().'.'.$file2->getClientOriginalExtension();
+        $request->leader_card->move('storageCard',$filename2);
+
         return User::create([
             'group_name' => $data['group_name'],
             'password' => Hash::make($data['password']),
@@ -95,8 +104,8 @@ class RegisterController extends Controller
             'leader_wa_number' => $data['leader_wa_number'],
             'leader_line_id' => $data['leader_line_id'],
             'leader_github' => $data['leader_github'],
-            'leader_CV' => $data['leader_CV'],
-            'leader_card' => $data['leader_card'],
+            'leader_CV' => $filename,
+            'leader_card' => $filename2,
         ]);
     }
 
@@ -114,7 +123,7 @@ class RegisterController extends Controller
 
         //$sortnya itu kek ASC atau DESC
         if ($request->input('sort')) {
-            $users = User::orderBy('name', request('sort'))->get();
+            $users = User::orderBy('group_name', request('sort'))->get();
         }
 
         //Filter
@@ -127,6 +136,25 @@ class RegisterController extends Controller
     }
 
 
+    //View CV and Card
+    public function viewFile(Request $request, $id){
+        $user = User::find($id);
+        return view('',compact('user'));
+    }
+
+
+    //Download CV
+    public function downloadCV($leader_cv){
+        return response()->download(public_path('storageCV/'.$leader_cv));
+    }
+
+
+    //Download Card
+    public function downloadCard($leader_card){
+        return response()->download(public_path('storageCard/'.$leader_card));
+    }
+
+
     //UPDATE
 
     public function getLeaderDataById($id)
@@ -135,9 +163,17 @@ class RegisterController extends Controller
         return view('update', ['user' => $user]);
     }
 
-    public function updateLeaderData(array $data, $id)
+    public function updateLeaderData(Request $request,array $data, $id)
     {
         $user = User::find($id);
+
+        $file = $request->leader_CV;
+        $filename = time().'.'.$file->getClientOriginalExtension();
+        $request->leader_CV->move('storageCV',$filename);
+
+        $file2 = $request->leader_card;
+        $filename2 = time().'.'.$file2->getClientOriginalExtension();
+        $request->leader_card->move('storageCard',$filename2);
 
         $user->update([
             'group_name' => $data['group_name'],
@@ -150,8 +186,8 @@ class RegisterController extends Controller
             'leader_github' => $data['leader_github'],
             'leader_birth_place' => $data['leader_birth_place'],
             'leader_birth_date' => $data['leader_birth_date'],
-            'leader_CV' => $data['leader_CV'],
-            'leader_card' => $data['leader_card'],
+            'leader_CV' => $filename,
+            'leader_card' => $filename2,
         ]);
 
         return redirect(route('silahkandiisi'));

@@ -27,6 +27,8 @@ class CreateUsersTable extends Migration
             $table->string('leader_github');
             $table->string('leader_CV');
             $table->string('leader_card');
+            $table->string('payment')->nullable();
+            $table->string('verification_status')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();

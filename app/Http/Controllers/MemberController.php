@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\MemberRequest;
 use App\Models\Member;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {
-    public function createMember(MemberRequest $request){
+    public function createMember(MemberRequest $request, $id){
 
         Member::create([
             'name' => $request->name,
@@ -20,6 +21,7 @@ class MemberController extends Controller
             'birth_date' => $request->birth_date,
             'cv' => $request->cv,
             'card' => $request->card,
+            'group_id' => $id,
         ]);
 
         return redirect(route(''));
