@@ -6,3 +6,14 @@ var m = n.getMonth();
 var d = n.getDate();
 var h = n.getDay();
 document.getElementById("date").innerHTML = day[h] + ", " + d + " " + months[m] + " " + y;
+
+function validateFileType(){
+    var fileName = document.getElementById("fileName").value;
+    var idxDot = fileName.lastIndexOf(".") + 1;
+    var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+    if (extFile=="jpg" || extFile=="jpeg" || extFile=="png" || extFile=="pdf"){
+
+    }else{
+        alert("Only jpg/jpeg and png files are allowed!");
+    }
+}

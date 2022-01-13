@@ -28,7 +28,6 @@
     }
 </style>
 <body>
-    <img src="" alt="">
     <div class="left-column">
         <section id="stat">
             <div class="stat-image">

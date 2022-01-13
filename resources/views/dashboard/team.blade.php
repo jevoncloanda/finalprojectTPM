@@ -25,7 +25,7 @@
                     <h3>Steven Nathaniel</h3>
                     <h3>Team Leader</h3>
                 </div>
-                <img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt="">
+                <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
             </div>
             <div class="member-2">
                 <div>
@@ -35,7 +35,7 @@
                     <h3>Aurellia Gita Elysia</h3>
                     <h3>Team Member</h3>
                 </div>
-                <img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt="">
+                <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
             </div>
             <div class="member-3">
                 <div>
@@ -45,7 +45,7 @@
                     <h3></h3>
                     <h3>Add Member</h3>
                 </div>
-                <img src="{{asset('Assets/Dashboard Icon/ellipse-add.png')}}" alt="">
+                <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-add.png')}}" alt=""></a>
             </div>
         </div>
     </section>
