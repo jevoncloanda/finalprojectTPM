@@ -10,16 +10,16 @@
 <style>
     @font-face {
     font-family: "monument_extendedultraboldZ";
-    src: url('{{asset('fonts/monumentextended-ultrabold-webfont.woff2')}}') format('woff2'),
-         url('{{asset('fonts/monumentextended-ultrabold-webfont.woff')}}') format('woff');
+    src: url('{{asset('Fonts/Monument/monumentextended-ultrabold-webfont.woff2')}}') format('woff2'),
+         url('{{asset('Fonts/Monument/monumentextended-ultrabold-webfont.woff')}}') format('woff');
     font-weight: normal;
     font-style: normal;
     }
 
     @font-face {
     font-family: "monument_extendedregular";
-    src: url('{{asset('fonts/monumentextended-regular-webfont.woff2')}}') format('woff2'),
-         url('{{asset('fonts/monumentextended-regular-webfont.woff')}}') format('woff');
+    src: url('{{asset('Fonts/Monument/monumentextended-regular-webfont.woff2')}}') format('woff2'),
+         url('{{asset('Fonts/Monument/monumentextended-regular-webfont.woff')}}') format('woff');
     font-weight: normal;
     font-style: normal;
     }

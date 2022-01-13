@@ -27,7 +27,7 @@
                 <a href=""><p>Timeline</p></a>
                 <a href=""><p>FAQ</p></a>
                 <a href=""><p>Mentor & Jury</p></a>
-                <btn class='btn registration-btn'>Sign In</btn>
+                <button class='btn registration-btn'>Sign In</button>
             </div>
         </div>
     </nav>
@@ -87,6 +87,7 @@
     <div class="sign-in-section sign-up-section section">
         <div class="container">
             <form action="{{route('register')}}" method="POST" enctype="multipart/form-data" class="container-items center">
+                @csrf
 
                 <div class="foo-container">
 

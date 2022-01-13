@@ -83,15 +83,15 @@ class RegisterController extends Controller
 
     //CREATE DATA
 
-    protected function create(Request $request, array $data)
+    protected function create(array $data)
     {
-        $file = $request->leader_CV;
-        $filename = time() . '.' . $file->getClientOriginalExtension();
-        $request->leader_CV->move('storageCV', $filename);
+        // $file = $request->leader_CV;
+        // $filename = time() . '.' . $file->getClientOriginalExtension();
+        // $request->leader_CV->move('storageCV', $filename);
 
-        $file2 = $request->leader_card;
-        $filename2 = time() . '.' . $file2->getClientOriginalExtension();
-        $request->leader_card->move('storageCard', $filename2);
+        // $file2 = $request->leader_card;
+        // $filename2 = time() . '.' . $file2->getClientOriginalExtension();
+        // $request->leader_card->move('storageCard', $filename2);
 
         return User::create([
             'group_name' => $data['group_name'],
@@ -104,8 +104,8 @@ class RegisterController extends Controller
             'leader_wa_number' => $data['leader_wa_number'],
             'leader_line_id' => $data['leader_line_id'],
             'leader_github' => $data['leader_github'],
-            'leader_CV' => $filename,
-            'leader_card' => $filename2,
+            'leader_CV' => $data['leader_CV'],
+            'leader_card' => $data['leader_card'],
         ]);
     }
 

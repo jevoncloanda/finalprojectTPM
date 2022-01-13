@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [Controller::class, 'getHomePage'])->name('getHomePage');
 
-Route::get('/dashboard', [Controller::class, 'getDashboardPage'])->name('getDashboardPage');
+Route::get('/dashboard', [DashboardController::class, 'getDashboardPage'])->name('getDashboardPage');
+
+Route::get('/dashboard/team', [DashboardController::class, 'getTeamPage'])->name('getTeamPage');
+
+Route::get('/dashboard/payment', [DashboardController::class, 'getPaymentPage'])->name('getPaymentPage');
 
 Route::get('/registration', [Controller::class, 'getRegistrationPage'])->name('getRegistrationPage');
 
