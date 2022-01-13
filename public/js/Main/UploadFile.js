@@ -7,13 +7,17 @@ export default class UploadFile {
         this.labelCV = document.getElementById('label-cv')
         this.labelIdentity = document.getElementById('label-identity')
 
-        this.identity.addEventListener('change', () => {
-            this.textContext(this.identity, this.labelIdentity)
-        })
+        if (this.identity) {
+            this.identity.addEventListener('change', () => {
+                this.textContext(this.identity, this.labelIdentity)
+            })
+        }
 
-        this.cv.addEventListener('change', () => {
-            this.textContext(this.cv, this.labelCV)
-        })
+        if (this.cv) {
+            this.cv.addEventListener('change', () => {
+                this.textContext(this.cv, this.labelCV)
+            })
+        }
     }
 
     textContext(item, text) {

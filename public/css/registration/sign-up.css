@@ -6,6 +6,10 @@
     margin-bottom: 4px;
 }
 
+.sign-up-section h4 {
+    margin-top: 10px !important;
+}
+
 .sign-up-section .triangle {
     margin-left: -10px;
     margin-right: 5px;
@@ -116,4 +120,19 @@ input[type="radio"]:checked~.checkmark {
 
 .file label {
     cursor: pointer;
+}
+
+.warning {
+    color: red !important;
+}
+
+.background-red {
+    background: red !important;
+}
+
+.warning-text {
+    font-size: 10px;
+    margin-top: 6px;
+    font-weight: bold;
+    color: red;
 }

@@ -35,7 +35,7 @@
     <!-- Sign In Section -->
     <div class="sign-in-section section hidden">
         <div class="container">
-            <form action="{{route('login')}}" method="POST" class="container-items center">
+            <form class="container-items center" action="{{route('login')}}" method="POST">
 
                 <div class="foo-container">
 
@@ -48,7 +48,7 @@
                                 <span class="iconify" data-icon="akar-icons:person"></span>
                             </div>
                             <div class="display-table-cell">
-                                <input name="group_name" type='text' placeholder="Please type your team name here..">
+                                <input type='text' placeholder="Please type your team name here..">
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                                 <span class="iconify" data-icon="akar-icons:key"></span>
                             </div>
                             <div class="display-table-cell">
-                                <input name="password" type='text' placeholder="Please type your team password here..">
+                                <input type='text' placeholder="Please type your team password here..">
                             </div>
                         </div>
                     </div>
@@ -71,9 +71,9 @@
 
                     <div class="center">
                         <div class="foo-bar-container">
-                            <button class='btn sign-in-btn' type='submit'>Next</button>
+                            <button class='btn sign-in-btn' type='submit'>Login</button>
                             <p>Don't have an account ?
-                                <span><a>Sign Up</a></span>
+                                <span><a class='sign-up-text'>Sign Up</a></span>
                             </p>
                         </div>
                     </div>
@@ -86,8 +86,8 @@
     <!-- Sign Up Section -->
     <div class="sign-in-section sign-up-section section">
         <div class="container">
-            <form action="{{route('register')}}" method="POST" class="container-items center" enctype="multipart/form-data">
-                @csrf
+            <form action="{{route('register')}}" method="POST" enctype="multipart/form-data" class="container-items center">
+
                 <div class="foo-container">
 
                     <h1 class="sign-in">Sign Up</h1>
@@ -107,13 +107,15 @@
                                 <div class="display-table-cell icon-placeholder">
                                     <span class="iconify" data-icon="akar-icons:person"></span>
                                 </div>
-                                <div class="display-table-cell">
-                                    <input type="text" name="group_name" id="group_name" placeholder="Please type your team name here..">
+                                <div class="display-table-cell display-flex">
+                                    <input class='text-input input' type='text' id="group_name" name="group_name" placeholder="Please type your team name here..">
+                                    <span class="iconify warning hidden" data-icon="carbon:warning"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line warning-line"></div>
+                        <p class='warning-text hidden'>Please input this field</p>
 
                         <h4>Password</h4>
                         <div class="display-table">
@@ -121,13 +123,15 @@
                                 <div class="display-table-cell icon-placeholder">
                                     <span class="iconify" data-icon="akar-icons:key"></span>
                                 </div>
-                                <div class="display-table-cell">
-                                    <input type="password" name="password" id="password" placeholder="Please type your team password here..">
+                                <div class="display-table-cell display-flex">
+                                    <input class='text-input input' type='password' id="password" name="password" placeholder="Please type your team password here..">
+                                    <span class="iconify warning hidden" data-icon="carbon:warning"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line warning-line"></div>
+                        <p class='warning-text hidden'>Password must contain atleast 1 uppercase letter and numbers</p>
 
                         <h4>Registration Type</h4>
                         <div class="display-table">
@@ -135,23 +139,25 @@
                                 <div class="display-table-cell icon-placeholder">
                                     <span class="iconify triangle" data-icon="fluent:triangle-12-regular"></span>
                                 </div>
-                                <div class="display-table-cell">
-                                    <select name="status" id="status">
-                                        <option>Please select your registration type</option>
-                                        <option value='Binusian'>Binusian</option>
-                                        <option value='Non-binusian'>Non Binusian</option>
+                                <div class="display-table-cell display-flex">
+                                    <select id="status" name="status" class='select-input input'>
+                                        <option value='null'>Please select your registration type</option>
+                                        <option value='binusian'>Binusian</option>
+                                        <option value='non-binusian'>Non Binusian</option>
                                     </select>
+                                    <span class="iconify warning float-right hidden" data-icon="carbon:warning"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line warning-line"></div>
+                        <p class='warning-text hidden'>Please input this field</p>
 
                         <div class="center">
                             <div class="foo-bar-container">
                                 <button class='btn sign-in-btn next'>Next</button>
                                 <p>Already have an account ?
-                                    <span><a>Login</a></span>
+                                    <span><a class='login-text'>Login</a></span>
                                 </p>
                             </div>
                         </div>
@@ -165,13 +171,15 @@
                                 <div class="display-table-cell icon-placeholder">
                                     <span class="iconify" data-icon="akar-icons:person"></span>
                                 </div>
-                                <div class="display-table-cell">
-                                    <input type="text" name="leader_name" id="leader_name" placeholder="Please type your full name here..">
+                                <div class="display-table-cell display-flex">
+                                    <input class='input' type='text' id="leader_name" name="leader_name" placeholder="Please type your full name here..">
+                                    <span class="iconify warning float-right hidden" data-icon="carbon:warning"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line warning-line"></div>
+                        <p class='warning-text hidden'>Please input this field</p>
 
                         <h4>Place Of Birth</h4>
                         <div class="display-table">
@@ -179,13 +187,15 @@
                                 <div class="display-table-cell icon-placeholder">
                                     <span class="iconify" data-icon="akar-icons:location"></span>
                                 </div>
-                                <div class="display-table-cell">
-                                    <input type="text" name="leader_birth_place" id="leader_birth_place" placeholder="Please type your place of birth here..">
+                                <div class="display-table-cell display-flex">
+                                    <input class='input' type='text' id="leader_birth_place" name="leader_birth_place" placeholder="Please type your place of birth here..">
+                                    <span class="iconify warning float-right hidden" data-icon="carbon:warning"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line warning-line"></div>
+                        <p class='warning-text hidden'>Please input this field</p>
 
                         <h4>Date Of Birth</h4>
                         <div class="display-table">
@@ -193,22 +203,24 @@
                                 <div class="display-table-cell icon-placeholder">
                                     <span class="iconify triangle" data-icon="fluent:triangle-12-regular"></span>
                                 </div>
-                                <div class="display-table-cell">
-                                    <input type="date" name="leader_birth_date" id="leader_birth_date">
+                                <div class="display-table-cell display-flex">
+                                    <input class='input' type='date' id="leader_birth_date" name="leader_birth_date">
+                                    <span class="iconify warning float-right hidden" data-icon="carbon:warning"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line warning-line"></div>
+                        <p class='warning-text hidden'>Participant must be atleast 17 years old</p>
 
                         <div class="center">
                             <div class="foo-bar-container">
                                 <div class="button-container">
-                                    <button class="btn sign-in-btn back">Back</button>
-                                    <button class="btn sign-in-btn next">Next</button>
+                                    <button class='btn sign-in-btn back'>Back</button>
+                                    <button class='btn sign-in-btn next'>Next</button>
                                 </div>
                                 <p>Already have an account ?
-                                    <span><a>Login</a></span>
+                                    <span><a class='login-text'>Login</a></span>
                                 </p>
                             </div>
                         </div>
@@ -223,13 +235,15 @@
                                 <div class="display-table-cell icon-placeholder">
                                     <span class="iconify" data-icon="carbon:email"></span>
                                 </div>
-                                <div class="display-table-cell">
-                                    <input type="email" name="leader_email" id="leader_email" placeholder="Please type your email here..">
+                                <div class="display-table-cell display-flex">
+                                    <input class='input' type='text' id="leader_email" name="leader_email" placeholder="Please type your email here..">
+                                    <span class="iconify warning float-right hidden" data-icon="carbon:warning"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line warning-line"></div>
+                        <p class='warning-text hidden'>Please input this field</p>
 
                         <h4>Whatsapp</h4>
                         <div class="display-table">
@@ -237,13 +251,15 @@
                                 <div class="display-table-cell icon-placeholder">
                                     <span class="iconify" data-icon="akar-icons:whatsapp-fill"></span>
                                 </div>
-                                <div class="display-table-cell">
-                                    <input type="text" name="leader_wa_number" id="leader_wa_number" placeholder="Please type your Whatsapp number here..">
+                                <div class="display-table-cell display-flex">
+                                    <input class='input' type='text' id="leader_wa_number" name="leader_wa_number" placeholder="Please type your Whatsapp number here..">
+                                    <span class="iconify warning float-right hidden" data-icon="carbon:warning"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line warning-line"></div>
+                        <p class='warning-text hidden'>Please input this field</p>
 
                         <h4>Line ID</h4>
                         <div class="display-table">
@@ -251,13 +267,15 @@
                                 <div class="display-table-cell icon-placeholder">
                                     <span class="iconify" data-icon="bi:line"></span>
                                 </div>
-                                <div class="display-table-cell">
-                                    <input type="text" name="leader_line_id" id="leader_line_id" placeholder="Please type your LINE ID here..">
+                                <div class="display-table-cell display-flex">
+                                    <input class='input' type='text' id="leader_line_id" name="leader_line_id" placeholder="Please type your LINE ID here..">
+                                    <span class="iconify warning float-right hidden" data-icon="carbon:warning"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line warning-line"></div>
+                        <p class='warning-text hidden'>Please input this field</p>
 
                         <h4>Github/Gitlab</h4>
                         <div class="display-table">
@@ -265,13 +283,15 @@
                                 <div class="display-table-cell icon-placeholder">
                                     <span class="iconify" data-icon="akar-icons:github-fill"></span>
                                 </div>
-                                <div class="display-table-cell">
-                                    <input type="text" name="leader_github" id="leader_github" placeholder="Please type your Github/Gitlab ID here..">
+                                <div class="display-table-cell display-flex">
+                                    <input class='input' type='text' id="leader_github" name="leader_github" placeholder="Please type your Github/Gitlab ID here..">
+                                    <span class="iconify warning float-right hidden" data-icon="carbon:warning"></span>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="line"></div>
+                        <div class="line warning-line"></div>
+                        <p class='warning-text hidden'>Please input this field</p>
 
                         <div class="center">
                             <div class="foo-bar-container">
@@ -280,7 +300,7 @@
                                     <button class='btn sign-in-btn next'>Next</button>
                                 </div>
                                 <p>Already have an account ?
-                                    <span><a>Login</a></span>
+                                    <span><a class='login-text'>Login</a></span>
                                 </p>
                             </div>
                         </div>
@@ -298,12 +318,12 @@
                             <div class="display-table-row gender">
                                 <div class="male-option gender">
                                     <label>Male
-                                        <input type="radio" value="male" name="gender"><span class="checkmark"></span>
+                                        <input type='radio' value='male' name='gender'><span class="checkmark"></span>
                                     </label>
                                 </div>
                                 <div class="female-option gender">
                                     <label>Female
-                                        <input type="radio" value='female' name='gender'><span class="checkmark"></span>
+                                        <input type='radio' value='female' name='gender'><span class="checkmark"></span>
                                     </label>
                                 </div>
                             </div>
@@ -317,7 +337,7 @@
                                     <span class="iconify" data-icon="carbon:email"></span>
                                 </div>
                                 <div class="display-table-cell file">
-                                    <input type="file" id="cv" name="leader_CV" hidden>
+                                    <input type='file' id='cv' name="leader_CV" hidden>
                                     <label for="cv" id='label-cv'>Please upload your CV card here...</label>
                                 </div>
                             </div>
@@ -332,7 +352,7 @@
                                     <span class="iconify" data-icon="carbon:email"></span>
                                 </div>
                                 <div class="display-table-cell file">
-                                    <input type="file" id='identity' name="leader_card" hidden>
+                                    <input type='file' id='identity' name="leader_card" hidden>
                                     <label for="identity" id='label-identity'>Please upload your identity card here...</label>
                                 </div>
                             </div>
@@ -342,7 +362,7 @@
 
                         <div class="center">
                             <div class="foo-bar-container">
-                                <button class="btn sign-in-btn" type="submit">Submit</button>
+                                <button class='btn sign-in-btn' type='submit'>Submit</button>
                             </div>
                         </div>
 

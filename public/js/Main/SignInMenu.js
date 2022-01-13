@@ -3,16 +3,32 @@ export default class SignIn {
     constructor() {
         this.signInButton = document.getElementsByClassName('registration-btn')
         this.signInSection = document.querySelectorAll('.sign-in-section')
+        this.signUpText = document.getElementsByClassName('sign-up-text')
+        this.loginText = document.querySelectorAll('.login-text')
 
-        console.log(this.signInSection);
+        if (this.signInButton) {
+            this.signInButton[0].addEventListener('click', () => {
+                if (this.signInButton[0].classList.contains('active-btn')) {
+                    this.setSignUp()
+                } else {
+                    this.setSignIn()
+                }
+            })
+        }
 
-        this.signInButton[0].addEventListener('click', () => {
-            if (this.signInButton[0].classList.contains('active-btn')) {
+        if (this.signUpText) {
+            this.signUpText[0].addEventListener('click', () => {
                 this.setSignUp()
-            } else {
-                this.setSignIn()
+            })
+        }
+
+        if (this.loginText) {
+            for (const login of this.loginText) {
+                login.addEventListener('click', () => {
+                    this.setSignIn()
+                })
             }
-        })
+        }
     }
 
     setSignIn() {

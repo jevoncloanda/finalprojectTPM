@@ -86,12 +86,12 @@ class RegisterController extends Controller
     protected function create(Request $request, array $data)
     {
         $file = $request->leader_CV;
-        $filename = time().'.'.$file->getClientOriginalExtension();
-        $request->leader_CV->move('storageCV',$filename);
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $request->leader_CV->move('storageCV', $filename);
 
         $file2 = $request->leader_card;
-        $filename2 = time().'.'.$file2->getClientOriginalExtension();
-        $request->leader_card->move('storageCard',$filename2);
+        $filename2 = time() . '.' . $file2->getClientOriginalExtension();
+        $request->leader_card->move('storageCard', $filename2);
 
         return User::create([
             'group_name' => $data['group_name'],
@@ -137,21 +137,24 @@ class RegisterController extends Controller
 
 
     //View CV and Card
-    public function viewFile(Request $request, $id){
+    public function viewFile(Request $request, $id)
+    {
         $user = User::find($id);
-        return view('',compact('user'));
+        return view('', compact('user'));
     }
 
 
     //Download CV
-    public function downloadCV($leader_cv){
-        return response()->download(public_path('storageCV/'.$leader_cv));
+    public function downloadCV($leader_cv)
+    {
+        return response()->download(public_path('storageCV/' . $leader_cv));
     }
 
 
     //Download Card
-    public function downloadCard($leader_card){
-        return response()->download(public_path('storageCard/'.$leader_card));
+    public function downloadCard($leader_card)
+    {
+        return response()->download(public_path('storageCard/' . $leader_card));
     }
 
 
@@ -163,17 +166,17 @@ class RegisterController extends Controller
         return view('update', ['user' => $user]);
     }
 
-    public function updateLeaderData(Request $request,array $data, $id)
+    public function updateLeaderData(Request $request, array $data, $id)
     {
         $user = User::find($id);
 
         $file = $request->leader_CV;
-        $filename = time().'.'.$file->getClientOriginalExtension();
-        $request->leader_CV->move('storageCV',$filename);
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $request->leader_CV->move('storageCV', $filename);
 
         $file2 = $request->leader_card;
-        $filename2 = time().'.'.$file2->getClientOriginalExtension();
-        $request->leader_card->move('storageCard',$filename2);
+        $filename2 = time() . '.' . $file2->getClientOriginalExtension();
+        $request->leader_card->move('storageCard', $filename2);
 
         $user->update([
             'group_name' => $data['group_name'],
