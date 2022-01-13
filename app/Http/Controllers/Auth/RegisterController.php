@@ -69,6 +69,7 @@ class RegisterController extends Controller
             'leader_wa_number' => ['required', 'string', 'min:9', 'max:20', 'unique:users'],
             'leader_line_id' => ['required', 'string', 'max:255', 'unique:users'],
             'leader_github' => ['required', 'string', 'max:255'],
+            'leader_genre' => ['required'],
             'leader_CV' => ['required', 'max:10000', 'mimes:pdf,jpg,jpeg,png'],
             'leader_card' => ['required', 'max:10000', 'mimes:pdf,jpg,jpeg,png'],
         ]);
@@ -83,15 +84,15 @@ class RegisterController extends Controller
 
     //CREATE DATA
 
-    protected function create(array $data)
+    protected function create(Request $request, array $data)
     {
-        // $file = $request->leader_CV;
-        // $filename = time() . '.' . $file->getClientOriginalExtension();
-        // $request->leader_CV->move('storageCV', $filename);
+        $file = $request->leader_CV;
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $request->leader_CV->move('storageCV', $filename);
 
-        // $file2 = $request->leader_card;
-        // $filename2 = time() . '.' . $file2->getClientOriginalExtension();
-        // $request->leader_card->move('storageCard', $filename2);
+        $file2 = $request->leader_card;
+        $filename2 = time() . '.' . $file2->getClientOriginalExtension();
+        $request->leader_card->move('storageCard', $filename2);
 
         return User::create([
             'group_name' => $data['group_name'],
@@ -104,8 +105,9 @@ class RegisterController extends Controller
             'leader_wa_number' => $data['leader_wa_number'],
             'leader_line_id' => $data['leader_line_id'],
             'leader_github' => $data['leader_github'],
-            'leader_CV' => $data['leader_CV'],
-            'leader_card' => $data['leader_card'],
+            'leader_genre' => $data['leader_genre'],
+            'leader_CV' => $data[$filename],
+            'leader_card' => $data[$filename2],
         ]);
     }
 
@@ -187,10 +189,11 @@ class RegisterController extends Controller
             'leader_wa_number' => $data['leader_wa_number'],
             'leader_line_id' => $data['leader_line_id'],
             'leader_github' => $data['leader_github'],
+            'leader_genre' => $data['leader_genre'],
             'leader_birth_place' => $data['leader_birth_place'],
             'leader_birth_date' => $data['leader_birth_date'],
-            'leader_CV' => $filename,
-            'leader_card' => $filename2,
+            'leader_CV' => $data[$filename],
+            'leader_card' => $data[$filename2],
         ]);
 
         return redirect(route('silahkandiisi'));

@@ -28,8 +28,11 @@ class User extends Authenticatable
         'leader_wa_number',
         'leader_line_id',
         'leader_github',
+        'leader_gender',
         'leader_CV',
         'leader_card',
+        'payment',
+        'verification_status',
     ];
 
     public function member()

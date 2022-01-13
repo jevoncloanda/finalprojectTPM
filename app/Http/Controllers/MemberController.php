@@ -6,10 +6,19 @@ use App\Http\Requests\MemberRequest;
 use App\Models\Member;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class MemberController extends Controller
 {
     public function createMember(MemberRequest $request, $id){
+
+        $file = $request->cv;
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $request->cv->move('storageCV', $filename);
+
+        $file2 = $request->card;
+        $filename2 = time() . '.' . $file2->getClientOriginalExtension();
+        $request->card->move('storageCard', $filename2);
 
         Member::create([
             'name' => $request->name,
@@ -19,8 +28,9 @@ class MemberController extends Controller
             'github' => $request->github,
             'birth_place' => $request->birth_place,
             'birth_date' => $request->birth_date,
-            'cv' => $request->cv,
-            'card' => $request->card,
+            'gender' => $request->gender,
+            'cv' => $filename,
+            'card' => $filename2,
             'group_id' => $id,
         ]);
 
@@ -30,6 +40,40 @@ class MemberController extends Controller
     public function viewMember(MemberRequest $request){
         $members = Member::all();
 
-        return view('memberView',['members' => $members]);
+        return view('',['members' => $members]);
+    }
+
+    public function getMemberDataById($id)
+    {
+        $member = Member::find($id);
+        return view('update', ['member' => $member]);
+    }
+
+    public function updateLeaderData(Request $request, $id)
+    {
+        $member = Member::find($id);
+
+        $file = $request->cv;
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $request->cv->move('storageCV', $filename);
+
+        $file2 = $request->card;
+        $filename2 = time() . '.' . $file2->getClientOriginalExtension();
+        $request->card->move('storageCard', $filename2);
+
+        $member->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'wa_number' => $request->wa_number,
+            'line_id' => $request->line_id,
+            'github' => $request->github,
+            'birth_place' => $request->birth_place,
+            'birth_date' => $request->birth_date,
+            'gender' => $request->gender,
+            'cv' => $filename,
+            'card' => $filename2,
+        ]);
+
+        return redirect(route(''));
     }
 }

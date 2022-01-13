@@ -17,6 +17,7 @@ class Member extends Model
         'github',
         'birth_place',
         'birth_date',
+        'gender',
         'CV',
         'card',
         'group_name',

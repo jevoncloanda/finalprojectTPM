@@ -32,6 +32,7 @@ class MemberRequest extends FormRequest
             'github' => ['required','string','max:255'],
             'birth_place' => ['required', 'string', 'max:255'],
             'birth_date' => ['required','date'],
+            'genre' => ['required'],
             'cv' => ['required','max:10000','mimes:pdf,jpg,jpeg,png'],
             'card' => ['required','max:10000','mimes:pdf,jpg,jpeg,png'],
         ];

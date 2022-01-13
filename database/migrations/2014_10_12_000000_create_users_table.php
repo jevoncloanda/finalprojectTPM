@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('leader_wa_number')->unique();
             $table->string('leader_line_id')->unique();
             $table->string('leader_github');
+            $table->string('leader_gender');
             $table->string('leader_CV');
             $table->string('leader_card');
             $table->string('payment')->nullable();

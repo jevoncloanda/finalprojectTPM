@@ -22,6 +22,7 @@ class CreateMembersTable extends Migration
             $table->string('github');
             $table->string('birth_place');
             $table->date('birth_date');
+            $table->string('gender');
             $table->string('CV');
             $table->string('card');
             $table->unsignedBigInteger('group_id');

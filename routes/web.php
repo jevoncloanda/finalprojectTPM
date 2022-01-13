@@ -31,3 +31,5 @@ Auth::routes();
 Route::get('/success', [App\Http\Controllers\HomeController::class, 'index'])->name('success');
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::post('/payment/{id}', [PaymentController::class, 'addPayment'])->name('addPayment');
