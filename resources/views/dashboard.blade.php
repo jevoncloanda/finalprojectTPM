@@ -177,6 +177,7 @@
             <h1>You Have Been Registered Successfully</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed.</p>
         </section>
+
         <section id="timeline">
             <h1>Timeline</h1>
             <div>

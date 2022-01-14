@@ -20,8 +20,7 @@ class PaymentController extends Controller
             'verification_status' => false,
         ]);
 
-        return redirect(route(''));
-
+        return redirect(route('getPaymentPage'));
     }
 
     public function viewPayment(Request $request, $id)
@@ -35,7 +34,7 @@ class PaymentController extends Controller
         $user = User::find($id);
 
         $user->update([
-            'verification_status' => true,
+            'verification_status' => 'Approved',
         ]);
 
         return redirect(route(''));
