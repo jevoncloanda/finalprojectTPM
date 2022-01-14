@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
        if (isValid()) {
            let usr = new User(name.value, email.value, subject.value, message.value);
 
-           alert(`Thanks for the message.`)
+           alert(`Thanks for the message. We'll be in touch through your email`)
 
        } else {
            alert("Please enter all fields")
