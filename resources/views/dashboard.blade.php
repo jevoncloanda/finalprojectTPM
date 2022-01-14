@@ -157,8 +157,11 @@
             <h1>Upload Payment Receipt</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed. Viverra aliquet consequat consequat congue. Volutpat act.</p>
             <div class="upload-receipt">
-                <input type="file" src="{{asset('/Assets/Dashboard Icon/upload.png')}}" id="receipt" accept="image/png, image/gif, image/jpeg, application/pdf" onchange="validateFileType()">
-                <img src="{{asset('Assets/Dashboard Icon/upload.png')}}" alt="">
+                <label for="upload">
+                    <img class="upload-img" src="{{asset('Assets/Dashboard Icon/upload.png')}}" alt="">
+
+                </label>
+                <input class="upload-input" id="upload" type="file" src="{{asset('Assets/Dashboard Icon/upload.png')}}" id="receipt" accept="image/png, image/gif, image/jpeg, application/pdf" onchange="validateFileType()">
                 <p>Upload or drag file from your device</p>
             </div>
         </section>

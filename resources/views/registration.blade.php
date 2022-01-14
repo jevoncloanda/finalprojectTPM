@@ -49,7 +49,7 @@
                                 <span class="iconify" data-icon="akar-icons:person"></span>
                             </div>
                             <div class="display-table-cell">
-                                <input type='password' id="group_name" name="group_name" placeholder="Please type your team name here..">
+                                <input type='text' id="group_name" name="group_name" placeholder="Please type your team name here..">
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                                 <span class="iconify" data-icon="akar-icons:key"></span>
                             </div>
                             <div class="display-table-cell">
-                                <input type='text' name="password" placeholder="Please type your team password here..">
+                                <input type='password' name="password" placeholder="Please type your team password here..">
                             </div>
                         </div>
                     </div>

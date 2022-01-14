@@ -23,7 +23,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 300px;
-    height: 18vh;
+    height: 110px;
     margin: 50px;
     margin-right: 10px;
     margin-bottom: 15px;
@@ -74,13 +74,15 @@ h3 {
     flex-direction: row;
     justify-content: center;
     width: 300px;
-    height: 63vh;
-    margin: 0px 50px 50px 50px;
+    height: 450px;
+    /* margin: 0px 50px 50px 50px; */
+    margin-top: 5px;
+    margin-left: 50px;
     margin-right: 10px;
     padding: 10px;
     background-color: white;
     border-radius: 26px;
-    top: 28.5vh;
+    top: 23vh;
     border: 1px solid #EAEAEA;
     border-bottom-right-radius: 26px;
     border-bottom-left-radius: 26px;
@@ -274,6 +276,12 @@ label {
     padding-block: 5px;
 }
 
+input {
+    font-size: 10px;
+    width: 80%;
+    outline: none;
+}
+
 .contact-person {
     margin-top: 40px;
     margin-left: 10px;
@@ -325,6 +333,15 @@ label {
 .upload-receipt>p {
     margin-top: 5px;
     color: #616161;
+}
+
+.upload-img:hover {
+    cursor: pointer;
+}
+
+.upload-input {
+    position: absolute;
+    opacity: 0;
 }
 
 #pay-verified {
@@ -392,7 +409,7 @@ label {
 .timeline-right>img {
     margin-top: 20px;
     margin-inline: auto;
-    width: 45.8%;
+    width: 50%;
 }
 
 #timeline>div>.timeline-left>div {
