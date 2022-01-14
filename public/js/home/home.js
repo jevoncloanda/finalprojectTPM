@@ -18,25 +18,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
    function fieldValidation(field, validationFunction) {
     if (field == null) return false;
-   
+
     let isFieldValid = validationFunction(field.value)
     if (!isFieldValid) {
     field.className = 'placeholderRed';
     } else {
     field.className = '';
     }
-   
+
     return isFieldValid;
    }
 
    function isValid() {
     var valid = true;
-    
+
     valid &= fieldValidation(fields.name, isNotEmpty);
     valid &= fieldValidation(fields.email, isEmail);
     valid &= fieldValidation(fields.subject, isNotEmpty);
     valid &= fieldValidation(fields.message, isNotEmpty);
-   
+
     return valid;
    }
 
@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function() {
        if (isValid()) {
            let usr = new User(name.value, email.value, subject.value, message.value);
 
-           alert(`${usr.name} Thanks for the message.`)
+           alert(`Thanks for the message.`)
 
        } else {
-           alert("There was an error")
+           alert("Please enter all fields")
        }
    }
