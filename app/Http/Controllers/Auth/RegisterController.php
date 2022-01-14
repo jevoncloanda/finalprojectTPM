@@ -83,35 +83,8 @@ class RegisterController extends Controller
      */
 
     //CREATE DATA
-    protected function create(array $data)
-    {
-        return User::create([
-            'group_name' => $data['group_name'],
-            'password' => Hash::make($data['password']),
-            'status' => $data['status'],
-            'leader_name' => $data['leader_name'],
-            'leader_birth_place' => $data['leader_birth_place'],
-            'leader_birth_date' => $data['leader_birth_date'],
-            'leader_email' => $data['leader_email'],
-            'leader_wa_number' => $data['leader_wa_number'],
-            'leader_line_id' => $data['leader_line_id'],
-            'leader_github' => $data['leader_github'],
-            'leader_gender' => $data['leader_gender'],
-            'leader_CV' => $data['leader_CV'],
-            'leader_card' => $data['leader_card'],
-        ]);
-    }
-
-    // protected function create(Request $request, array $data)
+    // protected function create(array $data)
     // {
-    //     $file = $request->leader_CV;
-    //     $filename = time() . '.' . $file->getClientOriginalExtension();
-    //     $request->leader_CV->move('storageCV', $filename);
-
-    //     $file2 = $request->leader_card;
-    //     $filename2 = time() . '.' . $file2->getClientOriginalExtension();
-    //     $request->leader_card->move('storageCard', $filename2);
-
     //     return User::create([
     //         'group_name' => $data['group_name'],
     //         'password' => Hash::make($data['password']),
@@ -124,10 +97,37 @@ class RegisterController extends Controller
     //         'leader_line_id' => $data['leader_line_id'],
     //         'leader_github' => $data['leader_github'],
     //         'leader_gender' => $data['leader_gender'],
-    //         'leader_CV' => $data[$filename],
-    //         'leader_card' => $data[$filename2],
+    //         'leader_CV' => $data['leader_CV'],
+    //         'leader_card' => $data['leader_card'],
     //     ]);
     // }
+
+    protected function create(array $data)
+    {
+        $file = $data['leader_CV'];
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $data['leader_CV']->move('storageCV', $filename);
+
+        $file2 = $data['leader_card'];
+        $filename2 = time() . '.' . $file2->getClientOriginalExtension();
+        $data['leader_card']->move('storageCard', $filename2);
+
+        return User::create([
+            'group_name' => $data['group_name'],
+            'password' => Hash::make($data['password']),
+            'status' => $data['status'],
+            'leader_name' => $data['leader_name'],
+            'leader_birth_place' => $data['leader_birth_place'],
+            'leader_birth_date' => $data['leader_birth_date'],
+            'leader_email' => $data['leader_email'],
+            'leader_wa_number' => $data['leader_wa_number'],
+            'leader_line_id' => $data['leader_line_id'],
+            'leader_github' => $data['leader_github'],
+            'leader_gender' => $data['leader_gender'],
+            'leader_CV' => $filename,
+            'leader_card' => $filename2,
+        ]);
+    }
 
 
     //VIEW TEAM DATA (ADMIN)
@@ -186,17 +186,17 @@ class RegisterController extends Controller
         return view('update', ['user' => $user]);
     }
 
-    public function updateLeaderData(Request $request, array $data, $id)
+    public function updateLeaderData(array $data, $id)
     {
         $user = User::find($id);
 
-        $file = $request->leader_CV;
+        $file = $data['leader_CV'];
         $filename = time() . '.' . $file->getClientOriginalExtension();
-        $request->leader_CV->move('storageCV', $filename);
+        $data['leader_CV']->move('storageCV', $filename);
 
-        $file2 = $request->leader_card;
+        $file2 = $data['leader_card'];
         $filename2 = time() . '.' . $file2->getClientOriginalExtension();
-        $request->leader_card->move('storageCard', $filename2);
+        $data['leader_card']->move('storageCard', $filename2);
 
         $user->update([
             'group_name' => $data['group_name'],
@@ -210,8 +210,8 @@ class RegisterController extends Controller
             'leader_genre' => $data['leader_genre'],
             'leader_birth_place' => $data['leader_birth_place'],
             'leader_birth_date' => $data['leader_birth_date'],
-            'leader_CV' => $data[$filename],
-            'leader_card' => $data[$filename2],
+            'leader_CV' => $filename,
+            'leader_card' => $filename2,
         ]);
 
         return redirect(route('silahkandiisi'));
