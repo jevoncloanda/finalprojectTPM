@@ -36,6 +36,7 @@
     <div class="sign-in-section section hidden">
         <div class="container">
             <form class="container-items center" action="{{route('login')}}" method="POST">
+                @csrf
 
                 <div class="foo-container">
 
@@ -48,7 +49,7 @@
                                 <span class="iconify" data-icon="akar-icons:person"></span>
                             </div>
                             <div class="display-table-cell">
-                                <input type='text' placeholder="Please type your team name here..">
+                                <input type='text' name="group_name" placeholder="Please type your team name here..">
                             </div>
                         </div>
                     </div>
@@ -62,7 +63,7 @@
                                 <span class="iconify" data-icon="akar-icons:key"></span>
                             </div>
                             <div class="display-table-cell">
-                                <input type='text' placeholder="Please type your team password here..">
+                                <input type='text' name="password" placeholder="Please type your team password here..">
                             </div>
                         </div>
                     </div>
@@ -142,9 +143,9 @@
                                 </div>
                                 <div class="display-table-cell display-flex">
                                     <select id="status" name="status" class='select-input input'>
-                                        <option value='null'>Please select your registration type</option>
-                                        <option value='binusian'>Binusian</option>
-                                        <option value='non-binusian'>Non Binusian</option>
+                                        <option value='NULL'>Please select your registration type</option>
+                                        <option value='Binusian'>Binusian</option>
+                                        <option value='Non-binusian'>Non Binusian</option>
                                     </select>
                                     <span class="iconify warning float-right hidden" data-icon="carbon:warning"></span>
                                 </div>
@@ -319,12 +320,12 @@
                             <div class="display-table-row gender">
                                 <div class="male-option gender">
                                     <label>Male
-                                        <input type='radio' value='male' name='gender'><span class="checkmark"></span>
+                                        <input type='radio' value='Male' name='leader_gender'><span class="checkmark"></span>
                                     </label>
                                 </div>
                                 <div class="female-option gender">
                                     <label>Female
-                                        <input type='radio' value='female' name='gender'><span class="checkmark"></span>
+                                        <input type='radio' value='Female' name='leader_gender'><span class="checkmark"></span>
                                     </label>
                                 </div>
                             </div>
