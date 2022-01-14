@@ -33,9 +33,14 @@
             <div class="stat-image">
                 <img src="{{asset('Assets/Dashboard Icon/pfp.png')}}" alt="">
             </div>
+            <?php
+                use App\Models\User;
+                $id = Auth::user()->id;
+                $leader = User::find($id);
+            ?>
             <div class="stat-text">
                 <p>Welcome back,</p>
-                <h3 class="stat-name">Vaporeon Team</h3>
+                <h3 class="stat-name">{{$leader->group_name}} Team</h3>
             </div>
         </section>
 
@@ -52,7 +57,7 @@
                 <h3><a href="{{route('getDashboardPage')}}">Announcement</a></h3>
                 <h3><a href="{{route('getPaymentPage')}}">Payment</a></h3>
                 <h3><a href="{{route('getDashboardPage')}}">Schedule</a></h3>
-                <h3><a href="{{route('getTeamPage')}}">Team</a></h3>
+                <h3><a href="{{route('getTeamPage', ['id'=>$leader->id])}}">Team</a></h3>
             </div>
         </section>
     </div>

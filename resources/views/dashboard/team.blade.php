@@ -14,7 +14,12 @@
         </div>
     </header>
     <section id="team">
-        <h1>Vaporeon's Team Member</h1>
+        <?php
+            use App\Models\User;
+            $id = Auth::user()->id;
+            $leader = User::find($id);
+        ?>
+        <h1>{{$leader->group_name}}'s Team Member</h1>
         <img src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
         <div class="team-members">
             <div class="member-1">
@@ -22,31 +27,44 @@
                     <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
                 </div>
                 <div class="member-text">
-                    <h3>Steven Nathaniel</h3>
+                    <h3>{{$leader->leader_name}}</h3>
                     <h3>Team Leader</h3>
                 </div>
                 <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
             </div>
-            <div class="member-2">
-                <div>
-                    <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
+            <?php
+                $count = 0;
+            ?>
+            @foreach ($members as $member)
+                <div class="member-2">
+                    <div>
+                        <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
+                    </div>
+                    <div class="member-text">
+                        <h3>{{$member->name}}</h3>
+                        <h3>Team Member</h3>
+                    </div>
+                    <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                 </div>
-                <div class="member-text">
-                    <h3>Aurellia Gita Elysia</h3>
-                    <h3>Team Member</h3>
+                <?php
+                    $count++
+                ?>
+            @endforeach
+
+            @if ($count == 3)
+                Sudah penuh
+            @else
+                <div class="member-3">
+                    <div>
+                        <img src="{{asset('Assets/Dashboard Icon/ellipse.png')}}" alt="">
+                    </div>
+                    <div class="member-text">
+                        <h3></h3>
+                        <h3>Add Member</h3>
+                    </div>
+                    <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-add.png')}}" alt=""></a>
                 </div>
-                <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
-            </div>
-            <div class="member-3">
-                <div>
-                    <img src="{{asset('Assets/Dashboard Icon/ellipse.png')}}" alt="">
-                </div>
-                <div class="member-text">
-                    <h3></h3>
-                    <h3>Add Member</h3>
-                </div>
-                <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-add.png')}}" alt=""></a>
-            </div>
+            @endif
         </div>
     </section>
     <div class="contact-person">

@@ -24,6 +24,12 @@ class PaymentController extends Controller
 
     }
 
+    public function viewPayment(Request $request, $id)
+    {
+        $user = User::find($id);
+        return view('', compact('user'));
+    }
+
     public function approvePayment($id){
 
         $user = User::find($id);

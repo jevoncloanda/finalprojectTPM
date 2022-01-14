@@ -76,4 +76,10 @@ class MemberController extends Controller
 
         return redirect(route(''));
     }
+
+    public function deleteMember($id)
+    {
+        Member::destroy($id);
+        return redirect(route('bebas'));
+    }
 }

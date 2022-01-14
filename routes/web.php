@@ -22,7 +22,7 @@ Route::get('/', [Controller::class, 'getHomePage'])->name('getHomePage');
 // Dashboard Route
 Route::get('/dashboard', [DashboardController::class, 'getDashboardPage'])->name('getDashboardPage');
 
-Route::get('/dashboard/team', [DashboardController::class, 'getTeamPage'])->name('getTeamPage');
+Route::get('/dashboard/team/{id}', [DashboardController::class, 'getTeamPage'])->name('getTeamPage');
 
 Route::get('/dashboard/payment', [DashboardController::class, 'getPaymentPage'])->name('getPaymentPage');
 
