@@ -27,4 +27,9 @@ class DashboardController extends Controller
     {
         return view('dashboard.team-add');
     }
+
+    public function getProfilePage()
+    {
+        return view('dashboard.profile');
+    }
 }
