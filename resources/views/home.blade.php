@@ -271,31 +271,79 @@
     <section id="mentor">
         <h1>OUR MENTOR</h1>
         <ul>
-            <li>Design</li>
-            <li>Technology</li>
-            <li>Business</li>
+            <li onclick="switchDesign()" id="design-btn">Design</li>
+            <li onclick="switchTech()" id="technology-btn">Technology</li>
+            <li onclick="switchBusi()" id="business-btn">Business</button></li>
         </ul>
         <div class="mentor-design">
-            <div class="design1">
-                <img src="{{asset('Assets/Home/mentor-1.png')}}" alt="">
-                <div>
-                    <span class="design-name">Susan Warning</span>
+            <div id="design" class="design">
+                <div class="design1">
+                    <img src="{{asset('Assets/Home/mentor-1.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Susan Warning</span>
+                    </div>
+                    <p class="mentor-p">CEO of Youtube Global and founder of Coding Asia</p>
                 </div>
-                <p class="mentor-p">CEO of Youtube Global and founder of Coding Asia</p>
+                <div class="design2">
+                    <img src="{{asset('Assets/Home/mentor-2.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Dafeed Man</span>
+                    </div>
+                    <p class="mentor-p">Senior Software enginer at NASA Global </p>
+                </div>
+                <div class="design3">
+                    <img src="{{asset('Assets/Home/mentor-3.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Kimberly Victoria</span>
+                    </div>
+                    <p class="mentor-p">CEO of Canva Global and founder of ART.IO</p>
+                </div>
             </div>
-            <div class="design2">
-                <img src="{{asset('Assets/Home/mentor-2.png')}}" alt="">
-                <div>
-                    <span class="design-name">Dafeed Man</span>
+            <div id="technology" class="design technology">
+                <div class="design1">
+                    <img src="{{asset('Assets/Home/mentor-4.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Susan Warning</span>
+                    </div>
+                    <p class="mentor-p">CEO of Youtube Global and founder of Coding Asia</p>
                 </div>
-                <p class="mentor-p">Senior Software enginer at NASA Global </p>
+                <div class="design2">
+                    <img src="{{asset('Assets/Home/mentor-5.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Dafeed Man</span>
+                    </div>
+                    <p class="mentor-p">Senior Software enginer at NASA Global </p>
+                </div>
+                <div class="design3">
+                    <img src="{{asset('Assets/Home/mentor-6.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Kimberly Victoria</span>
+                    </div>
+                    <p class="mentor-p">CEO of Canva Global and founder of ART.IO</p>
+                </div>
             </div>
-            <div class="design3">
-                <img src="{{asset('Assets/Home/mentor-3.png')}}" alt="">
-                <div>
-                    <span class="design-name">Kimberly Victoria</span>
+            <div id="business" class="design business">
+                <div class="design1">
+                    <img src="{{asset('Assets/Home/mentor-7.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Susan Warning</span>
+                    </div>
+                    <p class="mentor-p">CEO of Youtube Global and founder of Coding Asia</p>
                 </div>
-                <p class="mentor-p">CEO of Canva Global and founder of ART.IO</p>
+                <div class="design2">
+                    <img src="{{asset('Assets/Home/mentor-8.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Dafeed Man</span>
+                    </div>
+                    <p class="mentor-p">Senior Software enginer at NASA Global </p>
+                </div>
+                <div class="design3">
+                    <img src="{{asset('Assets/Home/mentor-9.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Kimberly Victoria</span>
+                    </div>
+                    <p class="mentor-p">CEO of Canva Global and founder of ART.IO</p>
+                </div>
             </div>
         </div>
     </section>
@@ -303,26 +351,28 @@
     <section id="jury">
         <h1>OUR JURY </h1>
         <div class="mentor-design">
-            <div class="design1">
-                <img src="{{asset('Assets/Home/jury-1.png')}}" alt="">
-                <div>
-                    <span class="design-name">Harley Deminson</span>
+            <div class="design">
+                <div class="design1">
+                    <img src="{{asset('Assets/Home/jury-1.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Harley Deminson</span>
+                    </div>
+                    <p class="mentor-p">CEO of United Code Of The World (UCOTW)</p>
                 </div>
-                <p class="mentor-p">CEO of United Code Of The World (UCOTW)</p>
-            </div>
-            <div class="design2">
-                <img src="{{asset('Assets/Home/jury-2.png')}}" alt="">
-                <div>
-                    <span class="design-name">Markus Zekerbeg</span>
+                <div class="design2">
+                    <img src="{{asset('Assets/Home/jury-2.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Markus Zekerbeg</span>
+                    </div>
+                    <p class="mentor-p">CEO of META and founder of Facebook</p>
                 </div>
-                <p class="mentor-p">CEO of META and founder of Facebook</p>
-            </div>
-            <div class="design3">
-                <img src="{{asset('Assets/Home/jury-3.png')}}" alt="">
-                <div>
-                    <span class="design-name">Andy Siddeloy</span>
+                <div class="design3">
+                    <img src="{{asset('Assets/Home/jury-3.png')}}" alt="">
+                    <div>
+                        <span class="design-name">Andy Siddeloy</span>
+                    </div>
+                    <p class="mentor-p">CEO of Shopedia and founder of Wizard.io</p>
                 </div>
-                <p class="mentor-p">CEO of Shopedia and founder of Wizard.io</p>
             </div>
         </div>
     </section>
@@ -654,13 +704,13 @@
         <div class="container">
             <img src='{{asset('Assets/bncc logo 2.png')}}'class='logo'>
             <div class='footer-icons'>
-                <a href="">
+                <a href="mailto: kelompok6tpm@gmail.com">
                     <div class="icon-container">
                         <span class="iconify" data-icon="carbon:email"></span>
                     </div>
                 </a>
 
-                <a href="https://www.instagram.com/bnccbinus/">
+                <a href="https://www.instagram.com/technoscapebncc/">
                     <div class="icon-container">
                         <span class="iconify" data-icon="akar-icons:instagram-fill"></span>
                     </div>
