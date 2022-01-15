@@ -34,7 +34,7 @@ class MemberController extends Controller
             'group_id' => $id,
         ]);
 
-        return redirect(route(''));
+        return redirect(route('getTeamPage'));
     }
 
     public function viewMember(MemberRequest $request){

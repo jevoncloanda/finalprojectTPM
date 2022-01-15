@@ -13,7 +13,13 @@
             </div> --}}
         </div>
     </header>
-    <form action="">
+    <?php
+        use App\Models\User;
+        $id = Auth::user()->id;
+        $leader = User::find($id);
+    ?>
+    <form action="{{route('addMember',['id'=>$leader->id])}}" method="POST" enctype="multipart/form-data">
+        @csrf
         <section id="profile">
             <div class="profile-pic">
                 <h1>Profile Picture</h1>
@@ -35,18 +41,18 @@
                     <div class="info-left">
                         <div class="name">
                             <label for="name">Full Name</label>
-                            <input type="text" placeholder="Enter your full name here..."></input>
+                            <input name= "name" type="text" placeholder="Enter your full name here..."></input>
                         </div>
                         <div class="place">
                             <label for="place">Place of Birth</label>
-                            <input type="text" placeholder="Enter your place of birth here..."></input>
+                            <input name="birth_place" type="text" placeholder="Enter your place of birth here..."></input>
                         </div>
                         <div class="type">
                             <label for="type">Registration Type</label>
                             <div>
-                                <input type="radio" name="type" value="Binusian" id="binusian"></input>
+                                <input type="radio" name="status" value="Binusian" id="binusian"></input>
                                 <label for="binusian">Binusian</label>
-                                <input type="radio" name="type" value="Non-Binusian" id="non-binusian"></input>
+                                <input type="radio" name="status" value="Non-Binusian" id="non-binusian"></input>
                                 <label for="non-binusian">Non-Binusian</label>
                             </div>
                         </div>
@@ -54,7 +60,7 @@
                     <div class="info-right">
                         <div class="date">
                             <label for="date">Date of Birth</label>
-                            <input type="date"></input>
+                            <input name="birth_date" type="date"></input>
                         </div>
                         <div class="gender">
                             <label for="date">Gender</label>
@@ -77,21 +83,21 @@
                     <div class="info-left">
                         <div class="email">
                             <label for="email">Email</label>
-                            <input type="text" placeholder="Enter your email here..."></input>
+                            <input name="email" type="text" placeholder="Enter your email here..."></input>
                         </div>
                         <div class="whatsapp">
                             <label for="whatsapp">Whatsapp</label>
-                            <input type="text" placeholder="Enter your Whatsapp number here..."></input>
+                            <input name="wa_number" type="text" placeholder="Enter your Whatsapp number here..."></input>
                         </div>
                         <div class="line">
                             <label for="line">LINE ID</label>
-                            <input type="text" placeholder="Enter your Line ID here..."></input>
+                            <input name="line_id" type="text" placeholder="Enter your Line ID here..."></input>
                         </div>
                     </div>
                     <div class="info-right">
                         <div class="git">
                             <label for="git">Github/Gitlab</label>
-                            <input type="text" placeholder="Enter your github here..."></input>
+                            <input name="github" type="text" placeholder="Enter your github here..."></input>
                         </div>
                         <div class="info-button">
                             <button type="submit">Submit</button>

@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,3 +43,5 @@ Route::get('/success', [App\Http\Controllers\HomeController::class, 'index'])->n
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/payment/{id}', [PaymentController::class, 'addPayment'])->name('addPayment');
+
+Route::post('/addMember/{id}', [MemberController::class, 'createMember'])->name('createMember');
