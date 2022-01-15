@@ -53,5 +53,5 @@ Route::post('/payment/{id}', [PaymentController::class, 'addPayment'])->name('ad
 Route::post('/createMember', [MemberController::class, 'createMember'])->name('createMember');
 
 Route::group(['middleware' => IsAdminMiddleware::class], function(){
-    Route::get('/adminDashboard', [DashboardController::class,'getTeamData'])->name('getTeamData');
+    Route::get('/admin-dashboard', [DashboardController::class,'getTeamData'])->name('getTeamData');
 });

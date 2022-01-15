@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <img class="bg-bubble" src="./Assets/Background/admin-bubble.png" alt="">
+    <img class="bg-bubble" src="{{asset('Assets/Background/admin-bubble.png')}}" alt="">
     <div class="left-column">
         <h1>Admin Dashboard</h1>
         <section id="stat">
@@ -27,8 +27,8 @@
 
         <section id="menu">
             <div class="menu-icon">
-                <img src="./Assets/Dashboard Icon/members.png" alt="">
-                <img src="./Assets/Dashboard Icon/payment.png" alt="">
+                <img src="{{asset('Assets/Dashboard Icon/members.png')}}" alt="">
+                <img src="{{asset('Assets/Dashboard Icon/payment.png')}}" alt="">
             </div>
             <div class="menu-text">
                 <h3><a href="#">Team</a></h3>
@@ -47,7 +47,7 @@
                 <div class="header-feat">
                     <div class="search">
                         <form action="">
-                            <img src="./Assets/Dashboard Icon/search.png" alt=""><input name="search" type="text" placeholder="Search team or name...">
+                            <img src="{{asset('Assets/Dashboard Icon/search.png')}}" alt=""><input name="search" type="text" placeholder="Search team or name...">
                             <button type="submit">Search</button>
                         </form>
                     </div>
@@ -91,47 +91,47 @@
         <div>
             <section id="team">
                 <h1>Team List</h1>
-                <img class="_line_" src="./Assets/Dashboard Icon/line_.png" alt="">
+                <img class="_line_" src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
                 @foreach ($users as $user)
                     <div class="team-members">
                         <div class="member-1">
 
                         <div>
-                            <img src="./Assets/Dashboard Icon/profile-pfp.png" alt="">
+                            <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
                         </div>
                         <div class="member-text">
                             <h3>{{$user->group_name}}</h3>
                             <h3>Leader : {{$user->leader_name}}</h3>
                         </div>
-                        <a href="#"><img src="./Assets/Dashboard Icon/ellipse-arrow.png" alt=""></a>
+                        <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                     </div>
                 @endforeach
                 {{-- <div class="member-2">
                         <div>
-                            <img src="./Assets/Dashboard Icon/pfp-female.png" alt="">
+                            <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
                         </div>
                         <div class="member-text">
                             <h3>Brooklyn Visions</h3>
                             <h3>Leader : Miles Morales</h3>
                         </div>
-                        <a href="#"><img src="./Assets/Dashboard Icon/ellipse-arrow.png" alt=""></a>
+                        <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                     </div>
                     <div class="member-3">
                         <div>
-                            <img src="./Assets/Dashboard Icon/ellipse.png" alt="">
+                            <img src="{{asset('Assets/Dashboard Icon/ellipse.png')}}" alt="">
                         </div>
                         <div class="member-text">
                             <h3>Empire State University</h3>
                             <h3>Leader : John Xina</h3>
                         </div>
-                        <a href="#"><img src="./Assets/Dashboard Icon/ellipse-arrow.png" alt=""></a>
+                        <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                     </div>
                 </div> --}}
             </section>
 
             {{-- <section id="team">
                 <h1>Team Members</h1>
-                <img class="_line_" src="./Assets/Dashboard Icon/line_.png" alt="">
+                <img class="_line_" src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
                 <div class="test">
                     <div class="team-name">
                         <h1>Team Members</h1>
@@ -141,63 +141,63 @@
                     <div class="team-members">
                         <div class="member-1">
                             <div>
-                                <img src="./Assets/Dashboard Icon/profile-pfp.png" alt="">
+                                <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
                             </div>
                             <div class="member-text">
                                 <h3>Steven Nathaniel</h3>
                                 <h3>Team Leader</h3>
                             </div>
-                            <a href="#"><img src="./Assets/Dashboard Icon/ellipse-arrow.png" alt=""></a>
+                            <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                         </div>
                         <div class="member-2">
                             <div>
-                                <img src="./Assets/Dashboard Icon/pfp-female.png" alt="">
+                                <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
                             </div>
                             <div class="member-text">
                                 <h3>Aurellia Gita Elysia</h3>
                                 <h3>Team Member</h3>
                             </div>
-                            <a href="#"><img src="./Assets/Dashboard Icon/ellipse-arrow.png" alt=""></a>
+                            <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                         </div>
                         <div class="member-3">
                             <div>
-                                <img src="./Assets/Dashboard Icon/ellipse.png" alt="">
+                                <img src="{{asset('Assets/Dashboard Icon/ellipse.png')}}" alt="">
                             </div>
                             <div class="member-text">
                                 <h3></h3>
                                 <h3>Add Member</h3>
                             </div>
-                            <a href="#"><img src="./Assets/Dashboard Icon/ellipse-add.png" alt=""></a>
+                            <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-add.png')}}" alt=""></a>
                         </div>
                     </div>
-                    <button class="delete"><img src="./Assets/Dashboard Icon/delete.png" alt=""></button>
+                    <button class="delete"><img src="{{asset('Assets/Dashboard Icon/delete.png')}}" alt=""></button>
                 </div>
             </section>
 
             <section id="payment">
                 <section id="team">
                     <h1>Approval List</h1>
-                    <img class="_line_" src="./Assets/Dashboard Icon/line_.png" alt="">
+                    <img class="_line_" src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
                     <div class="team-members">
                         <div class="member-1">
                             <div>
-                                <img src="./Assets/Dashboard Icon/profile-pfp.png" alt="">
+                                <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
                             </div>
                             <div class="member-text">
                                 <h3>china #1</h3>
                                 <h3>Leader : John Xina</h3>
                             </div>
-                            <button onclick="openForm()"><img src="./Assets/Dashboard Icon/view.png" alt=""></button>
+                            <button onclick="openForm()"><img src="{{asset('Assets/Dashboard Icon/view.png')}}" alt=""></button>
                         </div>
                         <div class="member-2">
                             <div>
-                                <img src="./Assets/Dashboard Icon/pfp-female.png" alt="">
+                                <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
                             </div>
                             <div class="member-text">
                                 <h3>Brooklyn Visions</h3>
                                 <h3>Leader : Miles Morales</h3>
                             </div>
-                            <button onclick="openForm()"><img src="./Assets/Dashboard Icon/view.png" alt=""></button>
+                            <button onclick="openForm()"><img src="{{asset('Assets/Dashboard Icon/view.png')}}" alt=""></button>
                         </div>
                     </div>
                 </section>
@@ -206,9 +206,9 @@
             <section id="pay-approved">
                 <section id="team">
                     <h1>Approval List</h1>
-                    <img class="_line_" src="./Assets/Dashboard Icon/line_.png" alt="">
+                    <img class="_line_" src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
                     <div class="pay-success">
-                        <img src="./Assets/Dashboard Icon/success.png" alt="">
+                        <img src="{{asset('Assets/Dashboard Icon/success.png')}}" alt="">
                         <h1>All payments have been approved</h1>
                         <p>There are no recent payment updates currently.</p>
                     </div>
@@ -218,13 +218,13 @@
             <div class="receipt-popup" id="myForm">
                 <section id="pay-popup">
                     <div class="pay-popup2">
-                        <img onclick="closeForm()" src="./Assets/Home/close-form.png" alt="">
+                        <img onclick="closeForm()" src="{{asset('Assets/Home/close-form.png')}}" alt="">
                         <div class="receipt">
-                            <img src="./Assets/Dashboard Icon/receipt.png" alt="">
+                            <img src="{{asset('Assets/Dashboard Icon/receipt.png')}}" alt="">
                         </div>
                         <div class="acc">
-                            <button><img src="./Assets/Dashboard Icon/reject.png" alt=""></button>
-                            <button><img src="./Assets/Dashboard Icon/accept.png" alt=""></button>
+                            <button><img src="{{asset('Assets/Dashboard Icon/reject.png')}}" alt=""></button>
+                            <button><img src="{{asset('Assets/Dashboard Icon/accept.png')}}" alt=""></button>
                         </div>
                     </div>
                 </section> --}}
@@ -251,8 +251,8 @@
                             <input type="text" name="team" id="">
                         </div>
                         <div>
-                            <img class="square-delete" src="./Assets/Dashboard Icon/square-img.png" alt="">
-                            <img class="delete" src="./Assets/Dashboard Icon/delete.png" alt="">
+                            <img class="square-delete" src="{{asset('Assets/Dashboard Icon/square-img.png')}}" alt="">
+                            <img class="delete" src="{{asset('Assets/Dashboard Icon/delete.png')}}" alt="">
 
                             <label for="date">Date of Birth :</label>
                             <input type="text" name="date" id="date">
@@ -306,7 +306,7 @@
                             <span>1</span>
                         </div>
                         <div>
-                            <img src="./Assets/Dashboard Icon/square-img.png" alt="">
+                            <img src="{{asset('Assets/Dashboard Icon/square-img.png')}}" alt="">
                         </div>
                         <div>
                             <p>Name :</p>
@@ -320,7 +320,7 @@
                             <span>2</span>
                         </div>
                         <div>
-                            <img src="./Assets/Dashboard Icon/square-img.png" alt="">
+                            <img src="{{asset('Assets/Dashboard Icon/square-img.png')}}" alt="">
                         </div>
                         <div>
                             <p>Name :</p>
