@@ -46,9 +46,10 @@
                 @csrf
                 @method('patch')
                 <?php
-                use App\Models\User;
-                $leader = User::where('id',$member->group_id)->get();
-            ?>
+                    //use App\Models\User;
+                    //$groupid = $member->group_id;
+                    //$leader = User::where('id',$groupid)->get();
+                ?>
                 <div>
                     <div>
                         <h1>Member Edit Panel :</h1>
@@ -62,9 +63,6 @@
 
                                 <label for="role">Role :</label>
                                 <label for="role">Team Member</label>
-
-                                <label for="team">Team :</label>
-                                <label for="team">{{$leader->group_name}}</label>
                             </div>
                             <div>
                                 <img class="square-delete" src="{{asset('Assets/Dashboard Icon/square-img.png')}}"
@@ -73,9 +71,6 @@
 
                                 <label for="date">Date of Birth :</label>
                                 <input type="text" name="birth_date" id="date" value="{{$member->birth_place}}">
-
-                                <label for="type">Reg Type :</label>
-                                <label for="type">{{$leader->status}}</label>
                             </div>
                             <div>
                             </div>
@@ -117,7 +112,7 @@
             </form>
         </div>
 
-        <div class="part-right">
+        {{-- <div class="part-right">
             <section id="team-edit">
                 <div>
                     <h1>Team Edit Panel :</h1>
@@ -151,7 +146,7 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </div> --}}
 
     </section>
     <script src="{{asset('js/dashboard.js')}}"></script>

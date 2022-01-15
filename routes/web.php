@@ -68,5 +68,9 @@ Route::group(['middleware' => IsAdminMiddleware::class], function(){
     Route::patch('/admin-dashboard/teamdata/updateMemberData/{id}', [DashboardController::class, 'updateMemberData'])->name('updateMemberData');
 
     Route::get('/admin-dashboard/payment', [DashboardController::class, 'getTeamPayment'])->name('getTeamPayment');
+
+    Route::post('/admin-dashboard/acceptpayment', [PaymentController::class, 'acceptPayment'])->name('acceptPayment');
+
+    Route::post('/admin-dashboard/rejectpayment', [PaymentController::class, 'rejectPayment'])->name('rejectPayment');
 });
 

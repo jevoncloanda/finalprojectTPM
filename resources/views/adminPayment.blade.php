@@ -156,8 +156,14 @@
                         <img src="{{asset('Assets/Dashboard Icon/receipt.png')}}" alt="">
                     </div>
                     <div class="acc">
-                        <button><img src="{{asset('Assets/Dashboard Icon/reject.png')}}" alt=""></button>
-                        <button><img src="{{asset('Assets/Dashboard Icon/accept.png')}}" alt=""></button>
+                        <form action="{{route('rejectPayment',["id"=>$user->id])}}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <button type="submit"><img src="{{asset('Assets/Dashboard Icon/reject.png')}}" alt=""></button>
+                        </form>
+                        <form action="{{route('acceptPayment',["id"=>$user->id])}}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <button type="submit"><img src="{{asset('Assets/Dashboard Icon/accept.png')}}" alt=""></button>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -167,5 +173,4 @@
     <script src="{{asset('js/home/form-popup.js')}}"></script>
     <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
 </body>
-
 </html>

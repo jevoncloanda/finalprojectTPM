@@ -115,7 +115,7 @@
             </form>
         </div>
 
-        <div class="part-right">
+        {{-- <div class="part-right">
             <section id="team-edit">
                 <div>
                     <h1>Team Edit Panel :</h1>
@@ -149,7 +149,7 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </div> --}}
 
     </section>
     <script src="{{asset('js/dashboard.js')}}"></script>

@@ -29,7 +29,7 @@ class PaymentController extends Controller
         return view('', compact('user'));
     }
 
-    public function approvePayment($id){
+    public function acceptPayment($id){
 
         $user = User::find($id);
 
@@ -37,10 +37,10 @@ class PaymentController extends Controller
             'verification_status' => 'verified',
         ]);
 
-        return redirect(route(''));
+        return redirect(route('getTeamPayment'));
     }
 
-    public function declinePayment($id){
+    public function rejectPayment($id){
 
         $user = User::find($id);
 
@@ -48,7 +48,7 @@ class PaymentController extends Controller
             'verification_status'=> null,
         ]);
 
-        return redirect(route(''));
+        return redirect(route('getTeamPayment'));
     }
 
 }
