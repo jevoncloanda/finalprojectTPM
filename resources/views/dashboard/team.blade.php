@@ -23,9 +23,15 @@
         <img src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
         <div class="team-members">
             <div class="member-1">
-                <div>
-                    <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
-                </div>
+                @if ($leader->leader_gender == 'Male')
+                    <div>
+                        <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
+                    </div>
+                @else
+                    <div>
+                        <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
+                    </div>
+                @endif
                 <div class="member-text">
                     <h3>{{$leader->leader_name}}</h3>
                     <h3>Team Leader</h3>
@@ -37,9 +43,15 @@
             ?>
             @foreach ($members as $member)
                 <div class="member-2">
-                    <div>
-                        <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
-                    </div>
+                    @if ($member->gender == 'Male')
+                        <div>
+                            <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
+                        </div>
+                    @else
+                        <div>
+                            <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
+                        </div>
+                    @endif
                     <div class="member-text">
                         <h3>{{$member->name}}</h3>
                         <h3>Team Member</h3>
