@@ -39,62 +39,129 @@
             </div>
         </section>
     </div>
-    <section id="payment">
-        <section id="team">
-            <h1>Approval List</h1>
-            <img class="_line_" src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
-            <div class="team-members">
-                @foreach ($users as $user)
-                <div class="member-1">
-                    <div>
-                        <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
+    <div class="center-column">
+        <header>
+            <div class="header-top">
+                <div class="header-date">
+                    <h3>Dashboard</h3>
+                    <p id="date"></p>
+                </div>
+                <div class="header-feat">
+                    <div class="search">
+                        <form action="">
+                            <img src="{{asset('Assets/Dashboard Icon/search.png')}}" alt=""><input name="search"
+                                type="text" placeholder="Search team or name...">
+                            <button type="submit">Search</button>
+                        </form>
                     </div>
-                    <div class="member-text">
-                        <h3>{{$user->group_name}}</h3>
-                        <h3>Leader : {{$user->leader_name}}</h3>
+                    <div class="sort dropbtn">
+                        <form action="">
+                            <button class="dropdown">
+                                <span class="iconify-inline" data-icon="bx:bx-sort"></span>
+                                <span>Sort by</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="a-z" value="ASC" name="sort"><button type="submit" value="ASC"
+                                        name="sort"><span class="iconify-inline" data-icon="akar-icons:arrow-down"
+                                            style="color: black;"></span>
+                                        <span>A to Z</span></button></li>
+                                <li class="z-a" value="DESC" name="sort"><button type="submit" value="DESC"
+                                        name="sort"><span class="iconify-inline" data-icon="akar-icons:arrow-up"
+                                            style="color: black;"></span>
+                                        <span>Z to A</span></button></li>
+                            </ul>
+                        </form>
                     </div>
-                    <button onclick="openForm()"><img src="{{asset('Assets/Dashboard Icon/view.png')}}" alt=""></button>
+                    <div class="filter dropbtn">
+                        <form action="">
+                            <button class="dropdown">
+                                <span class="iconify-inline" data-icon="bx:bx-filter-alt" style="color: black;"></span>
+                                <span>Filter</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li class="a-z" name="Statusfilter" value="Binusian"><button name="Statusfilter"
+                                        value="Binusian" type="submit"><span class="iconify-inline"
+                                            data-icon="akar-icons:square-fill" style="color: white;"></span>
+                                        <span>BINUSIAN</span></button></li>
+                                <li class="a-z" name="Statusfilter" value="Non-binusian"><button name="Statusfilter"
+                                        value="Non-binusian" type="submit"><span class="iconify-inline"
+                                            data-icon="akar-icons:square-fill" style="color: #4e9a9e;"></span>
+                                        <span>Non-BINUSIAN</span></button></li>
+                                <li class="a-z" name="Verificationfilter" value="verified"><button
+                                        name="Verificationfilter" value="verified" type="submit"><span
+                                            class="iconify-inline" data-icon="akar-icons:square-fill"
+                                            style="color: #4e9a9e;"></span>
+                                        <span>Verified</span></button></li>
+                                <li class="a-z" name="Verificationfilter" value="unverified"><button
+                                        name="Verificationfilter" value="unverified" type="submit"><span
+                                            class="iconify-inline" data-icon="akar-icons:square-fill"
+                                            style="color: white;"></span>
+                                        <span>Unverified</span></button></li>
+                            </ul>
+                        </form>
+                    </div>
                 </div>
-                {{-- <div class="member-2">
-                    <div>
-                        <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
             </div>
-            <div class="member-text">
-                <h3>Brooklyn Visions</h3>
-                <h3>Leader : Miles Morales</h3>
-            </div>
-            <button onclick="openForm()"><img src="{{asset('Assets/Dashboard Icon/view.png')}}" alt=""></button>
-            </div> --}}
-            @endforeach
-            </div>
-        </section>
-    </section>
+        </header>
+        <br>
 
-    <section id="pay-approved">
-        <section id="team">
-            <h1>Approval List</h1>
-            <img class="_line_" src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
-            <div class="pay-success">
-                <img src="{{asset('Assets/Dashboard Icon/success.png')}}" alt="">
-                <h1>All payments have been approved</h1>
-                <p>There are no recent payment updates currently.</p>
-            </div>
+        <section id="payment">
+            <section id="team">
+                <h1>Approval List</h1>
+                <img class="_line_" src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
+                <div class="team-members">
+                    @foreach ($users as $user)
+                    <div class="member-1">
+                        <div>
+                            <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
+                        </div>
+                        <div class="member-text">
+                            <h3>{{$user->group_name}}</h3>
+                            <h3>Leader : {{$user->leader_name}}</h3>
+                        </div>
+                        <button onclick="openForm()"><img src="{{asset('Assets/Dashboard Icon/view.png')}}" alt=""></button>
+                    </div>
+                    {{-- <div class="member-2">
+                        <div>
+                            <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
+                </div>
+                <div class="member-text">
+                    <h3>Brooklyn Visions</h3>
+                    <h3>Leader : Miles Morales</h3>
+                </div>
+                <button onclick="openForm()"><img src="{{asset('Assets/Dashboard Icon/view.png')}}" alt=""></button>
+                </div> --}}
+                @endforeach
+                </div>
+            </section>
         </section>
-    </section>
 
-    <div class="receipt-popup" id="myForm">
-        <section id="pay-popup">
-            <div class="pay-popup2">
-                <img onclick="closeForm()" src="{{asset('Assets/Home/close-form.png')}}" alt="">
-                <div class="receipt">
-                    <img src="{{asset('Assets/Dashboard Icon/receipt.png')}}" alt="">
+        <section id="pay-approved">
+            <section id="team">
+                <h1>Approval List</h1>
+                <img class="_line_" src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
+                <div class="pay-success">
+                    <img src="{{asset('Assets/Dashboard Icon/success.png')}}" alt="">
+                    <h1>All payments have been approved</h1>
+                    <p>There are no recent payment updates currently.</p>
                 </div>
-                <div class="acc">
-                    <button><img src="{{asset('Assets/Dashboard Icon/reject.png')}}" alt=""></button>
-                    <button><img src="{{asset('Assets/Dashboard Icon/accept.png')}}" alt=""></button>
-                </div>
-            </div>
+            </section>
         </section>
+
+        <div class="receipt-popup" id="myForm">
+            <section id="pay-popup">
+                <div class="pay-popup2">
+                    <img onclick="closeForm()" src="{{asset('Assets/Home/close-form.png')}}" alt="">
+                    <div class="receipt">
+                        <img src="{{asset('Assets/Dashboard Icon/receipt.png')}}" alt="">
+                    </div>
+                    <div class="acc">
+                        <button><img src="{{asset('Assets/Dashboard Icon/reject.png')}}" alt=""></button>
+                        <button><img src="{{asset('Assets/Dashboard Icon/accept.png')}}" alt=""></button>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
     <script src="{{asset('js/dashboard.js')}}"></script>
     <script src="{{asset('js/home/form-popup.js')}}"></script>
