@@ -93,11 +93,11 @@
                         <div>
                             <div class="info-button">
                                 <label for="upload-cv">CV</label>
-                                <input class="upload-input" type="file" name="CV" style="visibility: hidden;" id="upload-cv" accept="image/png, image/gif, image/jpeg, application/pdf" onchange="validateFileType()">
+                                <input class="upload-input" type="file" name="CV" id="upload-cv" accept="image/png, image/gif, image/jpeg, application/pdf" onchange="validateFileType()">
                             </div>
                             <br>
                             <div class="info-button">
-                                <input class="upload-input" name="card" id="upload-flazz" type="file" id="upload-flazz" accept="image/png, image/gif, image/jpeg, application/pdf" onchange="validateFileType()">
+                                <input class="upload-input" name="card" type="file" id="upload-flazz" accept="image/png, image/gif, image/jpeg, application/pdf" onchange="validateFileType()">
                                 <label for="upload-flazz">Flazz</label>
                             </div>
                             <div class="info-button">
