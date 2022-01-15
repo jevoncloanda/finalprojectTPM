@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Middleware\IsAdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,6 +52,6 @@ Route::post('/payment/{id}', [PaymentController::class, 'addPayment'])->name('ad
 
 Route::post('/createMember', [MemberController::class, 'createMember'])->name('createMember');
 
-Route::group(['middleware'=>'auth'], function(){
-    Route::get('/adminDashboard', [])->name('');
+Route::group(['middleware' => IsAdminMiddleware::class], function(){
+    Route::get('/adminDashboard', [DashboardController::class,'getTeamData'])->name('getTeamData');
 });

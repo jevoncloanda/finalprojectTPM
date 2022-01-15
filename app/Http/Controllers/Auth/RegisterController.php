@@ -129,33 +129,6 @@ class RegisterController extends Controller
         ]);
     }
 
-
-    //VIEW TEAM DATA (ADMIN)
-
-    public function getLeaderData(Request $request)
-    {
-
-        if ($request->input('search')) {
-            $users = User::where('group_name', 'like', '%' . request('search') . '%')->get();
-        } else {
-            $users = User::all();
-        }
-
-        //$sortnya itu kek ASC atau DESC
-        if ($request->input('sort')) {
-            $users = User::orderBy('group_name', request('sort'))->get();
-        }
-
-        //Filter
-        if ($request->input('filter')) {
-            $users = User::where('verification_status', 'like', '%' . request('filter') . '%')->get();
-        }
-
-        //cara lain pake $appliers = DB::table('appliers')->get();
-        return view('view', ['users' => $users]);
-    }
-
-
     //View CV and Card
     public function viewFile(Request $request, $id)
     {

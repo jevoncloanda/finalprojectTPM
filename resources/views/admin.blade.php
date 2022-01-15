@@ -20,7 +20,7 @@
             </div>
             <div class="stat-text">
                 <p>Welcome back,</p>
-                <h3 class="stat-name">Julian Abrar</h3>
+                <h3 class="stat-name">Admin</h3>
                 <p class="status">Status : Admin Panel</p>
             </div>
         </section>
@@ -46,59 +46,67 @@
                 </div>
                 <div class="header-feat">
                     <div class="search">
-                        <img src="./Assets/Dashboard Icon/search.png" alt=""><input type="text" placeholder="Search team or name...">
+                        <form action="">
+                            <img src="./Assets/Dashboard Icon/search.png" alt=""><input name="search" type="text" placeholder="Search team or name...">
+                            <button type="submit">Search</button>
+                        </form>
                     </div>
                     <div class="sort dropbtn">
                         <button class="dropdown">
                             <span class="iconify-inline" data-icon="bx:bx-sort"></span>
                             <span>Sort by</span>
                         </button>
-                        <ul class="dropdown-menu">
-                            <li class="a-z"><button><span class="iconify-inline" data-icon="akar-icons:arrow-down" style="color: black;"></span>
+                        <form action="">
+                            <ul class="dropdown-menu">
+                                <li class="a-z" value="ASC" name="sort"><button type="submit" value="ASC" name="sort"><span class="iconify-inline" data-icon="akar-icons:arrow-down" style="color: black;"></span>
                                 <span>A to Z</span></button></li>
-                            <li class="z-a"><button><span class="iconify-inline" data-icon="akar-icons:arrow-up" style="color: black;"></span>
+                                <li class="z-a" value="DESC" name="sort"><button type="submit" value="DESC" name="sort"><span class="iconify-inline" data-icon="akar-icons:arrow-up" style="color: black;"></span>
                                 <span>Z to A</span></button></li>
-                        </ul>
+                            </ul>
+                        </form>
                     </div>
                     <div class="filter dropbtn">
                         <button class="dropdown">
                             <span class="iconify-inline" data-icon="bx:bx-filter-alt" style="color: black;"></span>
                             <span>Filter</span>
                         </button>
-                        <ul class="dropdown-menu">
-                            <li class="a-z"><button><span class="iconify-inline" data-icon="akar-icons:square-fill" style="color: white;"></span>
-                                <span>BINUSIAN</span></button></li>
-                            <li class="a-z"><button><span class="iconify-inline" data-icon="akar-icons:square-fill" style="color: #4e9a9e;"></span>
-                                <span>Non-BINUSIAN</span></button></li>
-                            <li class="a-z"><button><span class="iconify-inline" data-icon="akar-icons:square-fill" style="color: #4e9a9e;"></span>
-                                <span>Verified</span></button></li>
-                            <li class="a-z"><button><span class="iconify-inline" data-icon="akar-icons:square-fill" style="color: white;"></span>
-                                <span>Waiting Approval</span></button></li>
-                            <li class="a-z"><button><span class="iconify-inline" data-icon="akar-icons:square-fill" style="color: white;"></span>
-                                <span>Unverified</span></button></li>
+                        <form action="">
+                            <ul class="dropdown-menu">
+                                <li class="a-z" name="Statusfilter" value="Binusian"><button name="Statusfilter" value="Binusian" type="submit"><span class="iconify-inline" data-icon="akar-icons:square-fill" style="color: white;"></span>
+                                    <span>BINUSIAN</span></button></li>
+                                <li class="a-z" name="Statusfilter" value="Non-binusian"><button name="Statusfilter" value="Non-binusian" type="submit"><span class="iconify-inline" data-icon="akar-icons:square-fill" style="color: #4e9a9e;"></span>
+                                    <span>Non-BINUSIAN</span></button></li>
+                                <li class="a-z" name="Verificationfilter" value="verified"><button name="Verificationfilter" value="verified" type="submit"><span class="iconify-inline" data-icon="akar-icons:square-fill" style="color: #4e9a9e;"></span>
+                                    <span>Verified</span></button></li>
+                                <li class="a-z" name="Verificationfilter" value="unverified"><button name="Verificationfilter" value="unverified" type="submit"><span class="iconify-inline" data-icon="akar-icons:square-fill" style="color: white;"></span>
+                                    <span>Unverified</span></button></li>
                         </ul>
+                    </form>
                     </div>
                 </div>
             </div>
         </header>
 
         <br><br>
-        <!-- <div>
+        <div>
             <section id="team">
                 <h1>Team List</h1>
                 <img class="_line_" src="./Assets/Dashboard Icon/line_.png" alt="">
-                <div class="team-members">
-                    <div class="member-1">
+                @foreach ($users as $user)
+                    <div class="team-members">
+                        <div class="member-1">
+
                         <div>
                             <img src="./Assets/Dashboard Icon/profile-pfp.png" alt="">
                         </div>
                         <div class="member-text">
-                            <h3>Vaporeon</h3>
-                            <h3>Leader : Steven Nathaniel</h3>
+                            <h3>{{$user->group_name}}</h3>
+                            <h3>Leader : {{$user->leader_name}}</h3>
                         </div>
                         <a href="#"><img src="./Assets/Dashboard Icon/ellipse-arrow.png" alt=""></a>
                     </div>
-                    <div class="member-2">
+                @endforeach
+                {{-- <div class="member-2">
                         <div>
                             <img src="./Assets/Dashboard Icon/pfp-female.png" alt="">
                         </div>
@@ -118,10 +126,10 @@
                         </div>
                         <a href="#"><img src="./Assets/Dashboard Icon/ellipse-arrow.png" alt=""></a>
                     </div>
-                </div>
+                </div> --}}
             </section>
 
-            <section id="team">
+            {{-- <section id="team">
                 <h1>Team Members</h1>
                 <img class="_line_" src="./Assets/Dashboard Icon/line_.png" alt="">
                 <div class="test">
@@ -219,11 +227,11 @@
                             <button><img src="./Assets/Dashboard Icon/accept.png" alt=""></button>
                         </div>
                     </div>
-                </section>
+                </section> --}}
             </div>
-        </div> -->
+        </div>
 
-        <section id="participant">
+        {{-- <section id="participant">
             <div class="part-left">
                 <div>
                     <div>
@@ -324,7 +332,7 @@
                 </section>
             </div>
 
-        </section>
+        </section> --}}
     </div>
 
     <!-- <div class="right-column">

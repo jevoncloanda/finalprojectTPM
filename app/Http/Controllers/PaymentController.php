@@ -17,7 +17,7 @@ class PaymentController extends Controller
 
         $user->update([
             'payment'=>$filename,
-            'verification_status' => false,
+            'verification_status' => 'unverified',
         ]);
 
         return redirect(route('getPaymentPage'));
@@ -34,7 +34,7 @@ class PaymentController extends Controller
         $user = User::find($id);
 
         $user->update([
-            'verification_status' => 'Approved',
+            'verification_status' => 'verified',
         ]);
 
         return redirect(route(''));

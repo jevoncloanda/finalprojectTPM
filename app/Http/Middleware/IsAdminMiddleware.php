@@ -19,9 +19,8 @@ class IsAdminMiddleware
     {
         $user = Auth::user();
         if($user->group_name != 'admin'){
-            //
+            return redirect(route('getDashboardPage'));
         }
-
         return $next($request);
     }
 }

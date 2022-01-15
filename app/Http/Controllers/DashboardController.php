@@ -42,4 +42,31 @@ class DashboardController extends Controller
         $member = Member::find($id);
         return view('dashboard.profile',['member'=>$member]);
     }
+
+    //VIEW TEAM DATA (ADMIN)
+    public function getTeamData(Request $request)
+    {
+        if ($request->input('search')) {
+            $users = User::where('group_name', 'like', '%' . request('search') . '%')->get();
+        } else {
+            $users = User::all();
+        }
+
+        //$sortnya itu kek ASC atau DESC
+        if ($request->input('sort')) {
+            $users = User::orderBy('group_name', request('sort'))->get();
+        }
+
+        //Filter
+        if ($request->input('Verificationfilter')) {
+            $users = User::where('verification_status', 'like', '%' . request('Verificationfilter') . '%')->get();
+        }
+
+        if ($request->input('Statusfilter')) {
+            $users = User::where('status', 'like', '%' . request('Statusfilter') . '%')->get();
+        }
+
+        //cara lain pake $appliers = DB::table('appliers')->get();
+        return view('admin', ['users' => $users]);
+    }
 }
