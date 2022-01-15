@@ -72,10 +72,10 @@
     <div class="bubble">
         <img class="bg-bubble" src="{{asset('Assets/Background/home-bubble2.png')}}" alt="">
     </div>
-    </div>
+
+    <a href="#home"><img class="logo" src="{{asset('Assets/logo.png')}}" alt=""></a>
     @guest
     <nav>
-        <a href="#home"><h3>Hackathon 5.0</h3></a>
         <ul class="navbar">
             <!-- <li><a href="#home">Home</a></li> -->
             <li><a href="#about">About</a></li>
@@ -89,7 +89,6 @@
 
     @auth
     <nav>
-        <a href="#home"><h3>Hackathon 5.0</h3></a>
         <ul class="navbar">
             <li><a href="{{route('getDashboardPage')}}">Dashboard</a></li>
             <li><a href="#about">About</a></li>
