@@ -64,7 +64,7 @@
             @endforeach
 
             @if ($count == 3)
-                Sudah penuh
+                <label for="fullrfgg">Sudah penuh</label>
             @else
                 <div class="member-3">
                     <div>

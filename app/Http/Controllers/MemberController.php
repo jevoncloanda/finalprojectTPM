@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 class MemberController extends Controller
 {
     public function createMember(MemberRequest $request, $id){
+        $id = $id;
         $file = $request->CV;
         $filename = time() . '.' . $file->getClientOriginalExtension();
         $request->CV->move('storageCV', $filename);

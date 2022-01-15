@@ -14,7 +14,7 @@ class DashboardController extends Controller
 
     public function getTeamPage($id)
     {
-        $members = Member::where('group_id', $id);
+        $members = Member::where('group_id',$id)->get();
         return view('dashboard.team', ['members' => $members]);
     }
 
