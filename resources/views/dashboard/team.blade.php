@@ -36,7 +36,7 @@
                     <h3>{{$leader->leader_name}}</h3>
                     <h3>Team Leader</h3>
                 </div>
-                <a href="{{route('getProfilePage')}}"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
+                <a href="{{route('getLeaderProfilePage')}}"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
             </div>
             <?php
                 $count = 0;
@@ -56,7 +56,7 @@
                         <h3>{{$member->name}}</h3>
                         <h3>Team Member</h3>
                     </div>
-                    <a href="{{route('getProfilePage')}}"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
+                    <a href="{{route('getProfilePage',['id'=>$member->id])}}"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                 </div>
                 <?php
                     $count++
