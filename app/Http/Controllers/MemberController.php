@@ -6,12 +6,14 @@ use App\Http\Requests\MemberRequest;
 use App\Models\Member;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class MemberController extends Controller
 {
-    public function createMember(MemberRequest $request, $id){
-        $id = $id;
+    public function createMember(MemberRequest $request){
+
+        $id = Auth::user()->id;
         $file = $request->CV;
         $filename = time() . '.' . $file->getClientOriginalExtension();
         $request->CV->move('storageCV', $filename);
@@ -34,7 +36,7 @@ class MemberController extends Controller
             'group_id' => $id,
         ]);
 
-        return redirect(route('getTeamPage'));
+        return redirect(route('getTeamPage',['id'=>$id]));
     }
 
     public function viewMember(MemberRequest $request){

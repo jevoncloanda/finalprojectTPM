@@ -65,7 +65,7 @@
                     </div>
                     <div class="gender">
                         <label for="date">Gender</label>
-                        <p>{{$member->gender}}}</p>
+                        <p>{{$member->gender}}</p>
                     </div>
                 </div>
             </div>
