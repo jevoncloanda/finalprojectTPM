@@ -49,6 +49,7 @@
     width: 30vw;
     height: auto;
     transition: all 0.4s ease;
+    margin-top: -50px;
 }
 
 .card:first-child {
