@@ -46,4 +46,4 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/payment/{id}', [PaymentController::class, 'addPayment'])->name('addPayment');
 
-Route::post('/addMember/{id}', [MemberController::class, 'createMember'])->name('createMember');
+Route::post('/createMember/{id}', [MemberController::class, 'createMember'])->name('createMember');

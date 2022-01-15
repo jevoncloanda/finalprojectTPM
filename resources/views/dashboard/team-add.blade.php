@@ -18,7 +18,7 @@
         $id = Auth::user()->id;
         $leader = User::find($id);
     ?>
-    <form action="{{route('addMember',['id'=>$leader->id])}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('createMember',['id'=>$leader->id])}}" method="POST" enctype="multipart/form-data">
         @csrf
         <section id="profile">
             <div class="profile-pic">
@@ -46,15 +46,6 @@
                         <div class="place">
                             <label for="place">Place of Birth</label>
                             <input name="birth_place" type="text" placeholder="Enter your place of birth here..."></input>
-                        </div>
-                        <div class="type">
-                            <label for="type">Registration Type</label>
-                            <div>
-                                <input type="radio" name="status" value="Binusian" id="binusian"></input>
-                                <label for="binusian">Binusian</label>
-                                <input type="radio" name="status" value="Non-Binusian" id="non-binusian"></input>
-                                <label for="non-binusian">Non-Binusian</label>
-                            </div>
                         </div>
                     </div>
                     <div class="info-right">
@@ -99,8 +90,17 @@
                             <label for="git">Github/Gitlab</label>
                             <input name="github" type="text" placeholder="Enter your github here..."></input>
                         </div>
-                        <div class="info-button">
-                            <button type="submit">Submit</button>
+                        <div>
+                            <div class="info-button">
+                                <button><label for="upload-cv">CV</label></button>
+                                <input class="upload-input" type="file" name="CV" style="visibility: hidden;" id="upload-cv" accept="image/png, image/gif, image/jpeg, application/pdf" onchange="validateFileType()">
+
+                                <input class="upload-input" name="card" id="upload-flazz" type="file" id="upload-flazz" accept="image/png, image/gif, image/jpeg, application/pdf" onchange="validateFileType()">
+                                <button><label for="upload-flazz">Flazz</label></button>
+                            </div>
+                            <div class="info-button">
+                                <button type="submit">Submit</button>
+                            </div>
                         </div>
                     </div>
                 </div>

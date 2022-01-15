@@ -12,9 +12,9 @@ class MemberController extends Controller
 {
     public function createMember(MemberRequest $request, $id){
 
-        $file = $request->cv;
+        $file = $request->CV;
         $filename = time() . '.' . $file->getClientOriginalExtension();
-        $request->cv->move('storageCV', $filename);
+        $request->CV->move('storageCV', $filename);
 
         $file2 = $request->card;
         $filename2 = time() . '.' . $file2->getClientOriginalExtension();
@@ -29,7 +29,7 @@ class MemberController extends Controller
             'birth_place' => $request->birth_place,
             'birth_date' => $request->birth_date,
             'gender' => $request->gender,
-            'cv' => $filename,
+            'CV' => $filename,
             'card' => $filename2,
             'group_id' => $id,
         ]);
