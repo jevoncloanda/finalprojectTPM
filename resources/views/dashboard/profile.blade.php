@@ -23,14 +23,6 @@
                 <div>
                     <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
                 </div>
-                <div class="profile-upload">
-                    <h1>UPLOAD</h1>
-                    <div>
-                        <button class="choose">Choose File</button>
-                        <p>No file chosen</p>
-                    </div>
-                    <button class="submit">SUBMIT</button>
-                </div>
             </div>
         </div>
         <div class="personal-info">
