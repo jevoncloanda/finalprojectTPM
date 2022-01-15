@@ -59,11 +59,11 @@ class DashboardController extends Controller
 
         //Filter
         if ($request->input('Verificationfilter')) {
-            $users = User::where('verification_status', 'like', '%' . request('Verificationfilter') . '%')->get();
+            $users = User::where('verification_status', 'like', request('Verificationfilter'))->get();
         }
 
         if ($request->input('Statusfilter')) {
-            $users = User::where('status', 'like', '%' . request('Statusfilter') . '%')->get();
+            $users = User::where('status', 'like', request('Statusfilter'))->get();
         }
 
         //cara lain pake $appliers = DB::table('appliers')->get();

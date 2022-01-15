@@ -52,11 +52,11 @@
                         </form>
                     </div>
                     <div class="sort dropbtn">
-                        <button class="dropdown">
-                            <span class="iconify-inline" data-icon="bx:bx-sort"></span>
-                            <span>Sort by</span>
-                        </button>
                         <form action="">
+                            <button class="dropdown">
+                                <span class="iconify-inline" data-icon="bx:bx-sort"></span>
+                                <span>Sort by</span>
+                            </button>
                             <ul class="dropdown-menu">
                                 <li class="a-z" value="ASC" name="sort"><button type="submit" value="ASC" name="sort"><span class="iconify-inline" data-icon="akar-icons:arrow-down" style="color: black;"></span>
                                 <span>A to Z</span></button></li>
@@ -66,11 +66,11 @@
                         </form>
                     </div>
                     <div class="filter dropbtn">
-                        <button class="dropdown">
-                            <span class="iconify-inline" data-icon="bx:bx-filter-alt" style="color: black;"></span>
-                            <span>Filter</span>
-                        </button>
                         <form action="">
+                            <button class="dropdown">
+                                <span class="iconify-inline" data-icon="bx:bx-filter-alt" style="color: black;"></span>
+                                <span>Filter</span>
+                            </button>
                             <ul class="dropdown-menu">
                                 <li class="a-z" name="Statusfilter" value="Binusian"><button name="Statusfilter" value="Binusian" type="submit"><span class="iconify-inline" data-icon="akar-icons:square-fill" style="color: white;"></span>
                                     <span>BINUSIAN</span></button></li>
@@ -106,27 +106,6 @@
                         <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                     </div>
                 @endforeach
-                {{-- <div class="member-2">
-                        <div>
-                            <img src="{{asset('Assets/Dashboard Icon/pfp-female.png')}}" alt="">
-                        </div>
-                        <div class="member-text">
-                            <h3>Brooklyn Visions</h3>
-                            <h3>Leader : Miles Morales</h3>
-                        </div>
-                        <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
-                    </div>
-                    <div class="member-3">
-                        <div>
-                            <img src="{{asset('Assets/Dashboard Icon/ellipse.png')}}" alt="">
-                        </div>
-                        <div class="member-text">
-                            <h3>Empire State University</h3>
-                            <h3>Leader : John Xina</h3>
-                        </div>
-                        <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
-                    </div>
-                </div> --}}
             </section>
 
             {{-- <section id="team">
