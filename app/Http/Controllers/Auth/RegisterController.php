@@ -153,49 +153,9 @@ class RegisterController extends Controller
 
     //UPDATE
 
-    public function getLeaderDataById($id)
-    {
-        $user = User::find($id);
-        return view('update', ['user' => $user]);
-    }
-
-    public function updateLeaderData(array $data, $id)
-    {
-        $user = User::find($id);
-
-        $file = $data['leader_CV'];
-        $filename = time() . '.' . $file->getClientOriginalExtension();
-        $data['leader_CV']->move('storageCV', $filename);
-
-        $file2 = $data['leader_card'];
-        $filename2 = time() . '.' . $file2->getClientOriginalExtension();
-        $data['leader_card']->move('storageCard', $filename2);
-
-        $user->update([
-            'group_name' => $data['group_name'],
-            'password' => Hash::make($data['password']),
-            'status' => $data['status'],
-            'leader_name' => $data['leader_name'],
-            'leader_email' => $data['leade_email'],
-            'leader_wa_number' => $data['leader_wa_number'],
-            'leader_line_id' => $data['leader_line_id'],
-            'leader_github' => $data['leader_github'],
-            'leader_genre' => $data['leader_genre'],
-            'leader_birth_place' => $data['leader_birth_place'],
-            'leader_birth_date' => $data['leader_birth_date'],
-            'leader_CV' => $filename,
-            'leader_card' => $filename2,
-        ]);
-
-        return redirect(route('silahkandiisi'));
-    }
-
-
-    //DELETE TEAM
-
-    public function deleteTeam($id)
-    {
-        User::destroy($id);
-        return redirect(route('bebas'));
-    }
+    // public function getLeaderDataById($id)
+    // {
+    //     $user = User::find($id);
+    //     return view('update', ['user' => $user]);
+    // }
 }
