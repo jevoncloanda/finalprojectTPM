@@ -16,7 +16,7 @@
                                 <h3>{{$user->leader_name}}</h3>
                                 <h3>Team Leader</h3>
                             </div>
-                            <a href="{{route('viewLeaderData', ['id'=>$user->id])}}"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
+                            <a href="{{route('getLeaderData', ['id'=>$user->id])}}"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                         </div>
                         @foreach ($members as $member)
                         <div class="member-2">
@@ -27,7 +27,7 @@
                                 <h3>{{$member->name}}</h3>
                                 <h3>Team Member</h3>
                             </div>
-                            <a href="{{route('viewMemberData',['id'=>$member->id])}}"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
+                            <a href="{{route('getMemberData',['id'=>$member->id])}}"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                         </div>
                         @endforeach
                     </div>
