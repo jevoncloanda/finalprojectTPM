@@ -55,3 +55,5 @@ Route::post('/createMember', [MemberController::class, 'createMember'])->name('c
 Route::group(['middleware' => IsAdminMiddleware::class], function(){
     Route::get('/admin-dashboard', [DashboardController::class,'getTeamData'])->name('getTeamData');
 });
+
+Route::get('/admin-dashborad/teamdata/{id}', [DashboardController::class,'getData'])->name('getData');

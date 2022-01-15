@@ -69,4 +69,11 @@ class DashboardController extends Controller
         //cara lain pake $appliers = DB::table('appliers')->get();
         return view('admin', ['users' => $users]);
     }
+
+    public function getData($id){
+        $user = User::find($id);
+        $members = Member::where('group_id',$id)->get();
+
+        return view('adminTeamData',['user'=>$user , 'members'=>$members]);
+    }
 }

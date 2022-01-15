@@ -103,7 +103,7 @@
                             <h3>{{$user->group_name}}</h3>
                             <h3>Leader : {{$user->leader_name}}</h3>
                         </div>
-                        <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
+                        <a href="{{route('getData', ['id'=>$user->id])}}"><img src="{{asset('Assets/Dashboard Icon/ellipse-arrow.png')}}" alt=""></a>
                     </div>
                 @endforeach
             </section>
