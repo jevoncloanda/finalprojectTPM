@@ -48,4 +48,8 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/payment/{id}', [PaymentController::class, 'addPayment'])->name('addPayment');
 
-Route::post('/createMember/{id}', [MemberController::class, 'createMember'])->name('createMember');
+Route::post('/createMember', [MemberController::class, 'createMember'])->name('createMember');
+
+Route::group(['middleware'=>'auth'], function(){
+    Route::get('/adminDashboard', [])->name('');
+});
