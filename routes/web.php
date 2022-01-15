@@ -25,6 +25,8 @@ Route::get('/dashboard', [DashboardController::class, 'getDashboardPage'])->name
 
 Route::get('/dashboard/team/{id}', [DashboardController::class, 'getTeamPage'])->name('getTeamPage');
 
+Route::get('/dashboard/team-add', [DashboardController::class, 'getTeamAddPage'])->name('getTeamAddPage');
+
 Route::get('/dashboard/payment', [DashboardController::class, 'getPaymentPage'])->name('getPaymentPage');
 
 // Registration Route

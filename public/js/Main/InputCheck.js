@@ -6,7 +6,7 @@ export default class Check {
         this.warningText = document.querySelectorAll('.warning-text')
         this.line = document.querySelectorAll('.warning-line')
 
-        // console.log(this.input);
+        console.log(this.input);
         // console.log(this.iconWarning);
         // console.log(this.warningText);
         // console.log(this.line);
@@ -24,6 +24,10 @@ export default class Check {
                 this.input[i].addEventListener('keyup', () => {
                     if (i == 1) {
                         this.checkPasswordInput(this.input[i].value, i)
+                    } else if (i == 6) {
+                        this.checkEmail(this.input[i].value, i)
+                    } else if (i == 7) {
+                        this.checkNumber(this.input[i].value, i)
                     } else {
                         this.checkEmptyInput(this.input[i].value, i)
                     }
@@ -35,10 +39,8 @@ export default class Check {
     checkEmptyInput(item, index) {
         if (item) {
             this.setHTMLPage(true, index)
-            console.log(this.iconWarning[index]);
         } else {
             this.setHTMLPage(false, index)
-            console.log(this.iconWarning[index]);
         }
     }
 
@@ -46,10 +48,29 @@ export default class Check {
         let tmp = []
         tmp.push(item)
         const tmpString = tmp.join ( )
-        const pattern = new RegExp("^(?=.*[A-Z])(?=.*\\d).+$")
+        const pattern = new RegExp("^(?=.*[A-Z])(?=.*\\d)(?=.*[-+_!@#$%^&*.,?])(?=^.{8,20}$).+$")
 
-        console.log(pattern.test(tmpString));
         if (pattern.test(tmpString)) {
+            this.setHTMLPage(true, index)
+        } else {
+            this.setHTMLPage(false, index)
+        }
+    }
+
+    checkNumber(item, index) {
+        const pattern = new RegExp("^(?=.*\\d)(?=^.{9,13}$).+$")
+
+        if (pattern.test(item)) {
+            this.setHTMLPage(true, index)
+        } else {
+            this.setHTMLPage(false, index)
+        }
+    }
+
+    checkEmail(item, index) {
+        const pattern = new RegExp("^(?=.*[@])(?=.*[.]).+$")
+
+        if (pattern.test(item)) {
             this.setHTMLPage(true, index)
         } else {
             this.setHTMLPage(false, index)
@@ -76,17 +97,15 @@ export default class Check {
         }
     }
 
-    disableButton() {
-
-    }
-
     setHTMLPage(bool, index) {
         if (bool) {
             this.iconWarning[index].classList.add('hidden')
+            this.iconWarning[index].classList.add('success')
             this.warningText[index].classList.add('hidden')
             this.line[index].classList.remove('background-red')
         } else {
             this.iconWarning[index].classList.remove('hidden')
+            this.iconWarning[index].classList.remove('success')
             this.warningText[index].classList.remove('hidden')
             this.line[index].classList.add('background-red')
         }

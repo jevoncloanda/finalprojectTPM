@@ -62,7 +62,7 @@
                         <h3></h3>
                         <h3>Add Member</h3>
                     </div>
-                    <a href="#"><img src="{{asset('Assets/Dashboard Icon/ellipse-add.png')}}" alt=""></a>
+                    <a href="{{route('getTeamAddPage')}}"><img src="{{asset('Assets/Dashboard Icon/ellipse-add.png')}}" alt=""></a>
                 </div>
             @endif
         </div>

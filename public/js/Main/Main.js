@@ -1,6 +1,7 @@
 
 import Dropdown from './DropdownAnswer.js'
 import UploadFile from './UploadFile.js'
+import Animation from './Animation.js'
 
 export default class Main {
     constructor() {
@@ -9,6 +10,7 @@ export default class Main {
         this.icons = document.querySelectorAll('.icon-container')
         this.answers = document.querySelectorAll('.answer-container')
         this.icons_shape = document.querySelectorAll('.faq-animated-icon')
+        this.animation = new Animation()
 
         for (const icon of this.icons) {
             if (icon.classList.contains('faq-icon-container')) {
