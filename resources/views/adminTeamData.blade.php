@@ -4,8 +4,8 @@
                 <div class="test">
                     <div class="team-name">
                         <h1>Team Members</h1>
-                        <span class="verif-span">BINUSIAN</span>
-                        <p class="verif">Verified</p>
+                        {{-- <span class="verif-span">BINUSIAN</span>
+                        <p class="verif">Verified</p> --}}
                     </div>
                     <div class="team-members">
                         <div class="member-1">

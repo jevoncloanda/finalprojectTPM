@@ -31,8 +31,8 @@
                 <img src="{{asset('Assets/Dashboard Icon/payment.png')}}" alt="">
             </div>
             <div class="menu-text">
-                <h3><a href="#">Team</a></h3>
-                <h3><a href="#">Payment</a></h3>
+                <h3><a href="{{route('getTeamData')}}">Team</a></h3>
+                <h3><a href="{{route('getTeamPayment')}}">Payment</a></h3>
             </div>
         </section>
     </div>

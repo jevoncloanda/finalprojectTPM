@@ -54,16 +54,19 @@ Route::post('/createMember', [MemberController::class, 'createMember'])->name('c
 
 Route::group(['middleware' => IsAdminMiddleware::class], function(){
     Route::get('/admin-dashboard', [DashboardController::class,'getTeamData'])->name('getTeamData');
+
+    Route::get('/admin-dashboard/teamdata/{id}', [DashboardController::class,'getData'])->name('getData');
+
+    Route::delete('/deleteTeam', [DashboardController::class, 'deleteTeam'])->name('deleteTeam');
+
+    Route::get('/admin-dashboard/teamdata/leaderData/{id}', [DashboardController::class, 'getLeaderData'])->name('getLeaderData');
+
+    Route::get('/admin-dashboard/teamdata/memberData/{id}', [DashboardController::class, 'getMemberData'])->name('getMemberData');
+
+    Route::patch('/admin-dashboard/teamdata/updateLeaderData/{id}', [DashboardController::class, 'updateLeaderData'])->name('updateLeaderData');
+
+    Route::patch('/admin-dashboard/teamdata/updateMemberData/{id}', [DashboardController::class, 'updateMemberData'])->name('updateMemberData');
+
+    Route::get('/admin-dashboard/payment', [DashboardController::class, 'getTeamPayment'])->name('getTeamPayment');
 });
 
-Route::get('/admin-dashboard/teamdata/{id}', [DashboardController::class,'getData'])->name('getData');
-
-Route::delete('/deleteTeam', [DashboardController::class, 'deleteTeam'])->name('deleteTeam');
-
-Route::get('/admin-dashboard/teamdata/leaderData/{id}', [DashboardController::class, 'getLeaderData'])->name('getLeaderData');
-
-Route::get('/admin-dashboard/teamdata/memberData/{id}', [DashboardController::class, 'getMemberData'])->name('getMemberData');
-
-Route::patch('/admin-dashboard/teamdata/updateLeaderData/{id}', [DashboardController::class, 'updateLeaderData'])->name('updateLeaderData');
-
-Route::patch('/admin-dashboard/teamdata/updateMemberData/{id}', [DashboardController::class, 'updateMemberData'])->name('updateMemberData');
