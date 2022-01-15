@@ -28,8 +28,13 @@ class DashboardController extends Controller
         return view('dashboard.team-add');
     }
 
-    public function getProfilePage()
+    public function getLeaderProfilePage()
     {
-        return view('dashboard.profile');
+        return view('dashboard.profileLeader');
+    }
+
+    public function getProfilePage($id){
+        $member = Member::find($id);
+        return view('dashboard.profile',['member'=>$member]);
     }
 }

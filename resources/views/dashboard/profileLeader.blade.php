@@ -1,11 +1,11 @@
 @extends('layouts.dashboardmenu')
 
 @section('menu')
-<?php
-    use App\Models\User;
-    $id = Auth::user()->id;
-    $leader = User::find($id);
-?>
+    <?php
+        use App\Models\User;
+        $id = Auth::user()->id;
+        $leader = User::find($id);
+    ?>
 <div class="right-column">
     <header>
         <div class="header-top">
@@ -24,7 +24,7 @@
             <div class="profile-line">
                 <img class="pfp-line" src="{{asset('Assets/Dashboard Icon/line_.png')}}" alt="">
             </div>
-            @if ($member->gender == "Male")
+            @if ($leader->leader_gender == "Male")
                 <div class="profile-pfp">
                     <div>
                         <img src="{{asset('Assets/Dashboard Icon/profile-pfp.png')}}" alt="">
@@ -47,11 +47,11 @@
                 <div class="info-left">
                     <div class="name">
                         <label for="name">Full Name</label>
-                        <p>{{$member->name}}</p>
+                        <p>{{$leader->leader_name}}</p>
                     </div>
                     <div class="place">
                         <label for="place">Place of Birth</label>
-                        <p>{{$member->birth_place}}</p>
+                        <p>{{$leader->leader_birth_place}}</p>
                     </div>
                     <div class="type">
                         <label for="type">Registration Type</label>
@@ -61,11 +61,11 @@
                 <div class="info-right">
                     <div class="date">
                         <label for="date">Date of Birth</label>
-                        <p>{{$member->birth_date}}</p>
+                        <p>{{$leader->leader_birth_date}}</p>
                     </div>
                     <div class="gender">
                         <label for="date">Gender</label>
-                        <p>{{$member->gender}}}</p>
+                        <p>{{$leader->leader_gender}}</p>
                     </div>
                 </div>
             </div>
@@ -79,21 +79,21 @@
                 <div class="info-left">
                     <div class="email">
                         <label for="email">Email</label>
-                        <p>{{$member->email}}}</p>
+                        <p>{{$leader->leader_email}}</p>
                     </div>
                     <div class="whatsapp">
                         <label for="whatsapp">Whatsapp</label>
-                        <p>{{$member->wa_number}}</p>
+                        <p>{{$leader->leader_wa_number}}</p>
                     </div>
                     <div class="line">
                         <label for="line">LINE ID</label>
-                        <p>{{$member->line_id}}}</p>
+                        <p>{{$leader->leader_line_id}}</p>
                     </div>
                 </div>
                 <div class="info-right">
                     <div class="git">
                         <label for="git">Github/Gitlab</label>
-                        <p>{{$member->github}}</p>
+                        <p>{{$leader->leader_github}}</p>
                     </div>
                 </div>
             </div>

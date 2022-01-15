@@ -26,7 +26,9 @@ Route::get('/dashboard', [DashboardController::class, 'getDashboardPage'])->name
 
 Route::get('/dashboard/team/{id}', [DashboardController::class, 'getTeamPage'])->name('getTeamPage');
 
-Route::get('/dashboard/profile', [DashboardController::class, 'getProfilePage'])->name('getProfilePage');
+Route::get('/dashboard/leaderProfile', [DashboardController::class, 'getLeaderProfilePage'])->name('getLeaderProfilePage');
+
+Route::get('/dashboard/profile/{id}', [DashboardController::class, 'getProfilePage'])->name('getProfilePage');
 
 Route::get('/dashboard/team-add', [DashboardController::class, 'getTeamAddPage'])->name('getTeamAddPage');
 

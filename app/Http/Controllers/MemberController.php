@@ -19,19 +19,18 @@ class MemberController extends Controller
         $filename2 = time() . '.' . $file2->getClientOriginalExtension();
         $request->card->move('storageCard', $filename2);
 
-
         Member::create([
             'name' => $request->name,
             'email' => $request->email,
-            // 'wa_number' => $request->wa_number,
-            // 'line_id' => $request->line_id,
-            // 'github' => $request->github,
-            // 'birth_place' => $request->birth_place,
-            // 'birth_date' => $request->birth_date,
-            // 'gender' => $request->gender,
-            // 'CV' => $filename,
-            // 'card' => $filename2,
-            // 'group_id' => $id,
+            'wa_number' => $request->wa_number,
+            'line_id' => $request->line_id,
+            'github' => $request->github,
+            'birth_place' => $request->birth_place,
+            'birth_date' => $request->birth_date,
+            'gender' => $request->gender,
+            'CV' => $filename,
+            'card' => $filename2,
+            'group_id' => $id,
         ]);
 
         return redirect(route('getTeamPage'));
