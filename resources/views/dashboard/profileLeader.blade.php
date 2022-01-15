@@ -2,7 +2,9 @@
 
 @section('menu')
     <?php
-
+        use App\Models\User;
+        $id = Auth::user()->id;
+        $leader = User::find($id);
     ?>
 <div class="right-column">
     <header>
