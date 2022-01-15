@@ -20,7 +20,7 @@ class MemberController extends Controller
         $request->card->move('storageCard', $filename2);
 
 
-        $member = Member::create([
+        Member::create([
             'name' => $request->name,
             'email' => $request->email,
             // 'wa_number' => $request->wa_number,
@@ -33,8 +33,6 @@ class MemberController extends Controller
             // 'card' => $filename2,
             // 'group_id' => $id,
         ]);
-
-        dd($member);
 
         return redirect(route('getTeamPage'));
     }
