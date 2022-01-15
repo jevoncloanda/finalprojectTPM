@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*

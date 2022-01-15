@@ -23,17 +23,17 @@
         <section id="pay-upload">
             <h1>Upload Payment Receipt</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisl convallis morbi elit eu luctus sed. Viverra aliquet consequat consequat congue. Volutpat act.</p>
-            <div class="upload-receipt">
-                <form action="{{route('addPayment', ['id'=>$leader->id])}}" method="POST" enctype="multipart/form-data">
-                    @csrf
+            <form action="{{route('addPayment', ['id'=>$leader->id])}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                <div class="upload-receipt">
                     <label for="upload">
                         <img class="upload-img" src="{{asset('Assets/Dashboard Icon/upload.png')}}" alt="">
                     </label>
                     <input class="upload-input" name="payment" id="upload" type="file" src="{{asset('Assets/Dashboard Icon/upload.png')}}" id="receipt" accept="image/png, image/gif, image/jpeg, application/pdf" onchange="validateFileType()">
                     <p>Upload or drag file from your device</p>
-                    {{-- Ini udah beres payment tinggal kurang button disini biar bs ke submit formnya --}}
-                </form>
-            </div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
         </section>
 
     @elseif ($leader->payment != null && $leader->verification_status == 'Approved')
