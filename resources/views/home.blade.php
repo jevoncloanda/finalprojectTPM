@@ -166,7 +166,8 @@
             <h2>HACKATHON</h2>
             <p>Lörem ipsum tåvis mamirade i prens i prejälogi. Diang ed kroning när fadunar. Lasse Berghagen-vin trinera dejins i roråbel, föbelt. Lall faning. Kin dopongar för att nyskade, i karade ogt. Tiligen kak digifysisk. Göling ass demoform. Dertad söngen yfengar tretedat. Treföss reprepurade. Semision anöktig ipysm pons. Anteskap platren. Reklejma donde pyd sperad, ett megalande. Fast hyposende, huruvida sor.</p>
             <div class="orange-button">
-                <a href="https://drive.google.com/file/d/1KPm3AJcOb031bTgXwhq94_Mu9Gb6rFMu/view?usp=sharing"><button><img src="{{asset('Assets/Home/arrow.png')}}" alt=""> Download Guidebook</button></a>
+                <a href="https://drive.google.com/file/d/1KPm3AJcOb031bTgXwhq94_Mu9Gb6rFMu/view?usp=sharing" target="_blank"
+                rel="noopener noreferrer"><button><img src="{{asset('Assets/Home/arrow.png')}}" alt=""> Download Guidebook</button></a>
             </div>
         </div>
     </section>
