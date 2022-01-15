@@ -79,7 +79,7 @@
                 <div class="info-left">
                     <div class="email">
                         <label for="email">Email</label>
-                        <p>{{$member->email}}}</p>
+                        <p>{{$member->email}}</p>
                     </div>
                     <div class="whatsapp">
                         <label for="whatsapp">Whatsapp</label>
@@ -87,7 +87,7 @@
                     </div>
                     <div class="line">
                         <label for="line">LINE ID</label>
-                        <p>{{$member->line_id}}}</p>
+                        <p>{{$member->line_id}}</p>
                     </div>
                 </div>
                 <div class="info-right">

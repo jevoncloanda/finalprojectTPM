@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -14,7 +16,7 @@ class DashboardController extends Controller
 
     public function getTeamPage($id)
     {
-        $members = Member::where('group_id', $id);
+        $members = Member::where('group_id', $id)->get();
         return view('dashboard.team', ['members' => $members]);
     }
 
@@ -25,7 +27,10 @@ class DashboardController extends Controller
 
     public function getTeamAddPage()
     {
-        return view('dashboard.team-add');
+        $id = Auth::user()->id;
+        $leader = User::find($id);
+        // dd($leader);
+        return view('dashboard.team-add', ['leader' => $leader]);
     }
 
     public function getLeaderProfilePage()
