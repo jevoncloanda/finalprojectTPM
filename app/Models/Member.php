@@ -12,15 +12,15 @@ class Member extends Model
     protected $fillable = [
         'name',
         'email',
-        'wa_number',
-        'line_id',
-        'github',
-        'birth_place',
-        'birth_date',
-        'gender',
-        'CV',
-        'card',
-        'group_name',
+        // 'wa_number',
+        // 'line_id',
+        // 'github',
+        // 'birth_place',
+        // 'birth_date',
+        // 'gender',
+        // 'CV',
+        // 'card',
+        // 'group_id',
     ];
 
     public function user()
