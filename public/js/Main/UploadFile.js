@@ -6,7 +6,7 @@ export default class UploadFile {
 
         this.labelCV = document.getElementById('label-cv')
         this.labelIdentity = document.getElementById('label-identity')
-
+        
         if (this.identity) {
             this.identity.addEventListener('change', () => {
                 this.textContext(this.identity, this.labelIdentity)

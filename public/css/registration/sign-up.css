@@ -1,3 +1,4 @@
+
 .sign-up-section select {
     border: none;
     outline: none;
@@ -7,7 +8,13 @@
 }
 
 .sign-up-section h4 {
+    font-family: "poppins";
     margin-top: 10px !important;
+    padding-bottom: 15px;
+}
+
+.temp-container p {
+    margin-top: 25px;
 }
 
 .sign-up-section .triangle {
@@ -17,7 +24,8 @@
 }
 
 .sign-up-section h1 {
-    margin-top: 20px !important;
+    font-family: "poppins";
+    margin-top: -5px !important;
     text-transform: capitalize;
 }
 
@@ -38,6 +46,7 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
+    margin-bottom: 15px;
 }
 
 .sign-up-section .circle:nth-child(2) {
@@ -47,7 +56,7 @@
 
 .sign-up-section .circle:nth-child(3) {
     margin-right: 10px;
-}
+} 
 
 .sign-up-section .circle.active {
     background: gray;
@@ -71,14 +80,15 @@
     height: 30px;
 }
 
-.gender h4 {
+.gender .gender-font {
     display: flex;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
     margin-left: 20px;
     margin-top: -10px !important;
-}
+    font-size: 15px !important;
+} 
 
 .gender .iconify {
     display: flex;
@@ -91,9 +101,10 @@
     display: flex !important;
 }
 
-.male-option.gender {
+.male-option.gender{
     margin-right: 45px;
 }
+
 
 input[type="radio"] {
     position: absolute;
@@ -111,11 +122,15 @@ input[type="radio"] {
     background-color: #c4c4c4;
     margin-right: 10px;
     margin-left: 10px;
-    border-radius: 50%;
+    border-radius: 50%; 
 }
 
-input[type="radio"]:checked~.checkmark {
-    background-color: gray;
+.male:checked ~ .checkmark {
+    background-color: #B4FBD9;
+}
+
+.female:checked ~ .checkmark {
+    background-color: #FBB4E3;
 }
 
 .file label {
@@ -135,4 +150,8 @@ input[type="radio"]:checked~.checkmark {
     margin-top: 6px;
     font-weight: bold;
     color: red;
+}
+
+button.back {
+    margin-right: 40px;
 }

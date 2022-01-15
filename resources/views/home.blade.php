@@ -275,55 +275,6 @@
             <li>Business</li>
         </ul>
         <div class="mentor-design">
-            <div class="design">
-                <div class="design1">
-                    <img src="{{asset('Assets/Home/mentor-1.png')}}" alt="">
-                    <div>
-                        <span class="design-name">Susan Warning</span>
-                    </div>
-                    <p class="mentor-p">CEO of Youtube Global and founder of Coding Asia</p>
-                </div>
-                <div class="design2">
-                    <img src="{{asset('Assets/Home/mentor-2.png')}}" alt="">
-                    <div>
-                        <span class="design-name">Dafeed Man</span>
-                    </div>
-                    <p class="mentor-p">Senior Software enginer at NASA Global </p>
-                </div>
-                <div class="design3">
-                    <img src="{{asset('Assets/Home/mentor-3.png')}}" alt="">
-                    <div>
-                        <span class="design-name">Kimberly Victoria</span>
-                    </div>
-                    <p class="mentor-p">CEO of Canva Global and founder of ART.IO</p>
-                </div>
-            </div>
-            <div class="design technology">
-                <div class="design1">
-                    <img src="{{asset('Assets/Home/mentor-1.png')}}" alt="">
-                    <div>
-                        <span class="design-name">Susan Warning</span>
-                    </div>
-                    <p class="mentor-p">CEO of Youtube Global and founder of Coding Asia</p>
-                </div>
-                <div class="design2">
-                    <img src="{{asset('Assets/Home/mentor-2.png')}}" alt="">
-                    <div>
-                        <span class="design-name">Dafeed Man</span>
-                    </div>
-                    <p class="mentor-p">Senior Software enginer at NASA Global </p>
-                </div>
-                <div class="design3">
-                    <img src="{{asset('Assets/Home/mentor-3.png')}}" alt="">
-                    <div>
-                        <span class="design-name">Kimberly Victoria</span>
-                    </div>
-                    <p class="mentor-p">CEO of Canva Global and founder of ART.IO</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="design business">
             <div class="design1">
                 <img src="{{asset('Assets/Home/mentor-1.png')}}" alt="">
                 <div>
@@ -351,33 +302,32 @@
     <section id="jury">
         <h1>OUR JURY </h1>
         <div class="mentor-design">
-            <div class="design">
-                <div class="design1">
-                    <img src="{{asset('Assets/Home/jury-1.png')}}" alt="">
-                    <div>
-                        <span class="design-name">Harley Deminson</span>
-                    </div>
-                    <p class="mentor-p">CEO of United Code Of The World (UCOTW)</p>
+            <div class="design1">
+                <img src="{{asset('Assets/Home/jury-1.png')}}" alt="">
+                <div>
+                    <span class="design-name">Harley Deminson</span>
                 </div>
-                <div class="design2">
-                    <img src="{{asset('Assets/Home/jury-2.png')}}" alt="">
-                    <div>
-                        <span class="design-name">Markus Zekerbeg</span>
-                    </div>
-                    <p class="mentor-p">CEO of META and founder of Facebook</p>
+                <p class="mentor-p">CEO of United Code Of The World (UCOTW)</p>
+            </div>
+            <div class="design2">
+                <img src="{{asset('Assets/Home/jury-2.png')}}" alt="">
+                <div>
+                    <span class="design-name">Markus Zekerbeg</span>
                 </div>
-                <div class="design3">
-                    <img src="{{asset('Assets/Home/jury-3.png')}}" alt="">
-                    <div>
-                        <span class="design-name">Andy Siddeloy</span>
-                    </div>
-                    <p class="mentor-p">CEO of Shopedia and founder of Wizard.io</p>
+                <p class="mentor-p">CEO of META and founder of Facebook</p>
+            </div>
+            <div class="design3">
+                <img src="{{asset('Assets/Home/jury-3.png')}}" alt="">
+                <div>
+                    <span class="design-name">Andy Siddeloy</span>
                 </div>
                 <p class="mentor-p">CEO of Shopedia and founder of Wizard.io</p>
             </div>
         </div>
     </section>
+
     <!-- Timeline Section -->
+    <section id="timeline">
     <section class="timeline section">
         <div class="container">
             <div class="container-items">
@@ -457,6 +407,7 @@
                 </div>
             </div>
         </div>
+    </section>
     </section>
 
 
@@ -574,28 +525,28 @@
                 <p>Platinum Sponsors</p>
                 <div class='display-table-row'>
                     <div class='display-table-cell platinum-sponsor picture'>
-                        <img src='{{asset('assets/sponsor/Meta 1.png')}}'>
+                        <img src='{{asset('Assets/sponsor/Meta 1.png')}}'>
                     </div>
                 </div>
                 <p>Gold Sponsors</p>
                 <div class='display-table-row'>
                     <div class='display-table-cell gold-sponsor picture'>
-                        <img class="gold1" src='{{asset('assets/sponsor/36c1015e 1.png')}}'>
+                        <img class="gold1" src='{{asset('Assets/sponsor/36c1015e 1.png')}}'>
                     </div>
                     <div class='display-table-cell gold-sponsor picture'>
-                        <img class="gold2" src='{{asset('assets/sponsor/intel-logo-8 1.png')}}'>
+                        <img class="gold2" src='{{asset('Assets/sponsor/intel-logo-8 1.png')}}'>
                     </div>
                     <div class='display-table-cell gold-sponsor picture'>
-                        <img class="gold3" src='{{asset('assets/sponsor/Gojek-Logo 1.png')}}'>
+                        <img class="gold3" src='{{asset('Assets/sponsor/Gojek-Logo 1.png')}}'>
                     </div>
                 </div>
                 <p>Silver Sponsors</p>
                 <div class='display-table-row'>
                     <div class='display-table-cell silver-sponsor picture'>
-                        <img class="silver1" src='{{asset('assets/sponsor/Adobe_Systems_logo_and_wordmark 1.png')}}'>
+                        <img class="silver1" src='{{asset('Assets/sponsor/Adobe_Systems_logo_and_wordmark 1.png')}}'>
                     </div>
                     <div class='display-table-cell silver-sponsor picture'>
-                        <img class="silver2" src='{{asset('assets/sponsor/MasterCard_early_1990s_logo 1.png')}}'>
+                        <img class="silver2" src='{{asset('Assets/sponsor/MasterCard_early_1990s_logo 1.png')}}'>
                     </div>
                 </div>
             </div>
@@ -606,38 +557,38 @@
     <section class='section media-partner'>
         <div class="container">
             <div class="container-item display-table">
-                <h1>Media Partner</h1>
+                <h1 class="h1">Media Partner</h1>
                 <div class="display-table-row animated-section">
                     <div class="display-table-cell picture">
-                        <img src='{{asset('assets/mediaPartner/page1/medpar1.png')}}'>
+                        <img src='{{asset('Assets/mediaPartner/page1/medpar1.png')}}'>
                     </div>
                     <div class="display-table-cell picture">
-                        <img src='{{asset('assets/mediaPartner/page1/medpar2.png')}}'>
+                        <img src='{{asset('Assets/mediaPartner/page1/medpar2.png')}}'>
                     </div>
                     <div class="display-table-cell picture">
-                        <img src='{{asset('assets/mediaPartner/page1/medpar3.png')}}'>
+                        <img src='{{asset('Assets/mediaPartner/page1/medpar3.png')}}'>
                     </div>
                     <div class="display-table-cell picture">
-                        <img src='{{asset('assets/mediaPartner/page1/medpar4.png')}}'>
+                        <img src='{{asset('Assets/mediaPartner/page1/medpar4.png')}}'>
                     </div>
                 </div>
                 <div class="display-table-row animated-section-1">
                     <div class="display-table-cell picture">
-                        <img src='{{asset('assets/mediaPartner/page1/medpar5.png')}}'>
+                        <img src='{{asset('Assets/mediaPartner/page1/medpar5.png')}}'>
                     </div>
                     <div class="display-table-cell picture">
-                        <img src='{{asset('assets/mediaPartner/page1/medpar6.png')}}'>
+                        <img src='{{asset('Assets/mediaPartner/page1/medpar6.png')}}'>
                     </div>
                     <div class="display-table-cell picture">
-                        <img src='{{asset('assets/mediaPartner/page1/medpar7.png')}}'>
+                        <img src='{{asset('Assets/mediaPartner/page1/medpar7.png')}}'>
                     </div>
                 </div>
                 <div class="display-table-row animated-section-2">
                     <div class="display-table-cell picture">
-                        <img src='{{asset('assets/mediaPartner/page1/medpar8.png')}}'>
+                        <img src='{{asset('Assets/mediaPartner/page1/medpar8.png')}}'>
                     </div>
                     <div class="display-table-cell picture">
-                        <img src='{{asset('assets/mediaPartner/page1/medpar9.png')}}'>
+                        <img src='{{asset('Assets/mediaPartner/page1/medpar9.png')}}'>
                     </div>
                 </div>
             </div>
@@ -658,7 +609,7 @@
 
                     <div class="display-table-cell foo">
                         <div class="picture">
-                            <img src='{{asset('assets/otherEvent/pict2.png')}}'>
+                            <img src='{{asset('Assets/otherEvent/pict2.png')}}'>
                         </div>
                         <h4>Virtual Conference</h4>
                         <p>Website Virtual Conference</p>
@@ -666,7 +617,7 @@
 
                     <div class="display-table-cell">
                         <div class="picture">
-                            <img src='{{asset('assets/otherEvent/pict1.png')}}'>
+                            <img src='{{asset('Assets/otherEvent/pict1.png')}}'>
                         </div>
                         <h4>Developer Workshop</h4>
                         <p>Website Developer Workshop</p>
@@ -687,11 +638,11 @@
                         <h1>Contact Us Now!</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum cum quas minus. Quae ipsam quos, omnis</p>
                     </div>
-                    <button class='btn'>Let's Talk!!</button>
+                    <div class="orange-button"><a href="#"><button onclick="openForm()"><img src="{{asset('Assets/Home/arrow.png')}}" alt=""> Let's Talk!</button></a></div>
                 </div>
 
                 <div class="picture">
-                    <img class="contact-img" src="{{asset('assets/contact 1.png')}}">
+                    <img class="contact-img" src="{{asset('Assets/contact 1.png')}}">
                </div>
             </div>
         </div>
@@ -700,7 +651,7 @@
     <footer class='footer'>
 
         <div class="container">
-            <img src='{{asset('assets/bncc logo 2.png')}}'class='logo'>
+            <img src='{{asset('Assets/bncc logo 2.png')}}'class='logo'>
             <div class='footer-icons'>
                 <a href="">
                     <div class="icon-container">
@@ -739,7 +690,8 @@
         <p class='privacy-policy'>Privacy Policy & Terms of Service</p>
     </footer>
 
-    <script type='module' src="script.js"></script>
+
+    <script type='module' src="{{asset('js/script.js')}}"></script>
     <script src="{{asset('js/home/home.js')}}"></script>
     <script src="{{asset('js/home/form-popup.js')}}"></script>
 </body>

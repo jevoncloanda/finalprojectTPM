@@ -17,8 +17,8 @@
     <title>Registration Page</title>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class='navbar registration-page'>
+
+    <nav class='navbar registration-page nav-none'>
         <div class="container">
             <div class="container-items">
                 <h2>Hackathon 5.0</h2>
@@ -31,6 +31,10 @@
             </div>
         </div>
     </nav>
+
+    <div class="bgatas">
+        <img src="../registration-page/style/Group 38.png" alt="">
+    </div>
 
     <!-- Sign In Section -->
     <div class="sign-in-section section hidden">
@@ -313,19 +317,19 @@
 
                         <div class="gender">
                             <span class="iconify" data-icon="bi:gender-ambiguous"></span>
-                            <h4>Gender</h4>
+                            <p class='gender-font'>Gender</p>
                         </div>
 
                         <div class="display-table">
                             <div class="display-table-row gender">
                                 <div class="male-option gender">
                                     <label>Male
-                                        <input type='radio' value='Male' name='leader_gender'><span class="checkmark"></span>
+                                        <input type='radio' value='Male' class="male" name='leader_gender'><span class="checkmark"></span>
                                     </label>
                                 </div>
                                 <div class="female-option gender">
                                     <label>Female
-                                        <input type='radio' value='Female' name='leader_gender'><span class="checkmark"></span>
+                                        <input type='radio' value='Female' class="female" name='leader_gender'><span class="checkmark"></span>
                                     </label>
                                 </div>
                             </div>

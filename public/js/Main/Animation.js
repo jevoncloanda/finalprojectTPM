@@ -29,7 +29,7 @@ export default class Animation {
     setAnimation() {
         this.animation.addEventListener('animationiteration', () => {
             this.setStatus()
-            console.log(this.bool);
+            // console.log(this.bool);
         })
     }
 

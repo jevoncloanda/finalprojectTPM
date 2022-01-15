@@ -1,6 +1,43 @@
-.sign-in-section .iconify {
-    color: black;
+
+body{
+    background-image: url(bg-bwh.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
+
+.bgatas img{
+    animation: updown 10s ease infinite;
+    position: absolute;
+    z-index: -10;
+    width: 30%;
+    top: 0; left: 0;
+}
+
+/* animasi */
+
+@keyframes updown {
+    0% {
+      transform: translateY(-0%);
+    }
+
+    50% {
+      transform: translateY(50%);
+    }
+
+    100% {
+      transform: translateY(-0%);
+    }
+  }
+
+.sign-in-section {
+    margin-top: 20vh;
+}
+
+.nav-none {
+    display: none;
+}
+
+.sign-in-section .iconify { color: black; }
 
 .sign-in-section .line {
     width: 430px;
@@ -9,7 +46,7 @@
 }
 
 .sign-in-section .container-items {
-    background: #e5e5e5;
+    background: white;
     width: 700px;
     height: 500px;
     border-radius: 20px;
@@ -45,8 +82,8 @@
 }
 
 .sign-in-section .btn {
-    background: #c4c4c4;
-    color: black;
+    background: linear-gradient(90deg, #F7A72E, #F44007);
+    color: white;
 }
 
 .foo-container h1 {
@@ -55,6 +92,7 @@
 }
 
 .foo-container h4 {
+    font-family: "poppins";
     margin-top: 35px;
 }
 
