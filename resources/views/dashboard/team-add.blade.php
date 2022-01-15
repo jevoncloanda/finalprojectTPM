@@ -18,18 +18,18 @@
             <div class="profile-pic">
                 <h1>Profile Picture</h1>
                 <div class="profile-line">
-                    <img class="pfp-line" src="/Assets/Dashboard Icon/line_.png" alt="">
+                    <img class="pfp-line" src="{{asset('/Dashboard Icon/line_.png')}}" alt="">
                 </div>
                 <div class="profile-pfp">
                     <div>
-                        <img src="./Assets/Dashboard Icon/profile-pfp.png" alt="">
+                        <img src="{{asset('/Dashboard Icon/profile-pfp.png')}}" alt="">
                     </div>
                 </div>
             </div>
             <div class="personal-info">
                 <h1>Personal Information</h1>
                 <div class="profile-line">
-                    <img src="/Assets/Dashboard Icon/line_.png" alt="">
+                    <img src="{{asset('/Dashboard Icon/line_.png')}}" alt="">
                 </div>
                 <div class="info">
                     <div class="info-left">
@@ -71,7 +71,7 @@
             <div class="contact-info">
                 <h1>Contact Information</h1>
                 <div class="profile-line">
-                    <img src="/Assets/Dashboard Icon/line_.png" alt="">
+                    <img src="{{asset('/Dashboard Icon/line_.png')}}" alt="">
                 </div>
                 <div class="info">
                     <div class="info-left">
